@@ -39,12 +39,10 @@ body{font-family:Inter,Arial,sans-serif;color:var(--ink);-webkit-font-smoothing:
 .card-art{position:absolute;left:0;top:0;width:308px;height:68px;overflow:hidden}
 .card-headline{position:absolute;left:8px;top:72px;width:294px;height:50px;margin:0;font-family:Barlow,Impact,sans-serif;font-size:23px;line-height:.98;font-weight:700;text-transform:uppercase}
 .card-standfirst{position:absolute;left:8px;top:120px;width:294px;height:42px;margin:0;font-size:10.5px;line-height:1.28;font-weight:400;color:var(--body)}
-.briefs{position:absolute;left:30px;top:898px;width:964px;height:100px;border-top:1px solid var(--ink);padding-top:6px}
+.briefs{position:absolute;left:30px;top:898px;width:964px;height:64px;border-top:1px solid var(--ink);padding-top:6px}
 .briefs-title{position:absolute;left:0;top:-6px;width:130px;height:12px;padding-right:8px;background:var(--paper);font-size:9.5px;line-height:12px;font-weight:700;letter-spacing:1.5px;color:var(--red);text-transform:uppercase;white-space:nowrap}
-.brief-col{position:absolute;top:6px;width:308px;height:93px;font-size:9.5px;line-height:1.22;font-weight:500;color:var(--body);margin:0;padding:0}
-.brief-col p{margin:0}
-.brief-col.left{left:0}.brief-col.mid{left:328px}.brief-col.right{left:656px}
-.brief{margin:0;white-space:normal}
+.brief-grid{position:absolute;left:0;top:6px;width:964px;height:56px;display:grid;grid-template-columns:repeat(4,232px);gap:8px 12px;font-size:9.5px;line-height:1.22;font-weight:500;color:var(--body);margin:0;padding:0}
+.brief{margin:0;white-space:normal;overflow:hidden;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical}
 .city{font-weight:700;color:var(--ink);letter-spacing:.4px}
 .footer{position:absolute;left:30px;top:978px;width:964px;height:24px;text-align:center;font-size:9px;line-height:12px;font-weight:400;color:var(--muted)}
 svg{display:block;width:100%;height:100%}
@@ -262,22 +260,15 @@ svg text{font-family:Inter,Arial,sans-serif}
 
   <section class="briefs" aria-label="Also reported">
     <div class="briefs-title">ALSO REPORTED</div>
-    <div class="brief-col left">
-      <p class="brief"><span class="city">NEW YORK —</span> A UN tribunal says UNRWA sacked nine Palestinian staff on unproven Israeli allegations.</p>
+    <div class="brief-grid">
+      <p class="brief"><span class="city">NEW YORK —</span> A UN tribunal says UNRWA sacked nine staff on unproven Israeli claims.</p>
       <p class="brief"><span class="city">MUMBAI —</span> India marks 18 years since the 2008 attacks; the constitution turns 77.</p>
-      <p class="brief"><span class="city">ABUJA —</span> Gunmen kill 30 in Niger state, and Tinubu will honour air-crash victims.</p>
-      <p class="brief"><span class="city">WEST JAVA —</span> Eight dead and 18 trapped in a flooded illegal gold mine.</p>
-    </div>
-    <div class="brief-col mid">
-      <p class="brief"><span class="city">ADEN —</span> Houthis push towards Yemen's temporary capital as residents plan to flee.</p>
-      <p class="brief"><span class="city">BAGHDAD —</span> The top court lets Baghdad take Kurdish borders and oil fields.</p>
-      <p class="brief"><span class="city">CARTAGENA —</span> 76 hostages freed as a 17-hour supermarket siege ends.</p>
+      <p class="brief"><span class="city">ADEN —</span> Houthis push towards Yemen's interim capital as residents plan to flee.</p>
+      <p class="brief"><span class="city">ABUJA —</span> Gunmen kill 30 in Niger state; Tinubu to honour air-crash victims.</p>
+      <p class="brief"><span class="city">WEST JAVA —</span> Eight dead and 18 trapped in a flooded gold mine.</p>
+      <p class="brief"><span class="city">CARTAGENA —</span> 76 hostages freed as a 17-hour siege ends.</p>
       <p class="brief"><span class="city">KUALA LUMPUR —</span> Malaysia seeks $146m from Google over YouTube scams.</p>
-    </div>
-    <div class="brief-col right">
-      <p class="brief"><span class="city">JIUQUAN —</span> Pakistan's Zeeshan Ali is the first foreign astronaut on Tiangong.</p>
-      <p class="brief"><span class="city">GENEVA —</span> Gukesh and Sindarov are level 1-1 before game three.</p>
-      <p class="brief"><span class="city">OBITUARY —</span> Duran Duran guitarist Andy Taylor, 65, dies of prostate cancer.</p>
+      <p class="brief"><span class="city">OBITUARY —</span> Duran Duran's Andy Taylor, 65, dies of prostate cancer.</p>
     </div>
   </section>
   <div class="footer">Every story happened or was first reported on 26 November 2026, in some time zone.<br>Illustrations, not photographs.</div>
