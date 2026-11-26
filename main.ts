@@ -31,10 +31,10 @@ try {
   if (outputDirectory.trim() === '') {
     fail('MAKEFUN_OUTPUT_DIR is set but empty');
   }
-  if (existsSync(outputDirectory) && statSync(outputDirectory).isDirectory()) {
-    fail(`MAKEFUN_OUTPUT_DIR points to an existing directory: ${outputDirectory}`);
-  }
   const destination = join(outputDirectory, 'entry.png');
+  if (existsSync(destination) && statSync(destination).isDirectory()) {
+    fail(`the output path already exists as a directory: ${destination}`);
+  }
   mkdirSync(dirname(destination), { recursive: true });
   writeFileSync(destination, bytes);
   const written = readFileSync(destination);
