@@ -1,5 +1,5 @@
 import { createHash } from 'node:crypto';
-import { mkdirSync, readFileSync, writeFileSync } from 'node:fs';
+import { existsSync, mkdirSync, readFileSync, statSync, writeFileSync } from 'node:fs';
 import { dirname, join } from 'node:path';
 import { fileURLToPath } from 'node:url';
 
@@ -28,13 +28,19 @@ try {
   const bytes = readFileSync(source);
   validatePng(bytes);
   const outputDirectory = process.env.MAKEFUN_OUTPUT_DIR ?? '/output';
+  if (outputDirectory.trim() === '') {
+    fail('MAKEFUN_OUTPUT_DIR is set but empty');
+  }
+  if (existsSync(outputDirectory) && statSync(outputDirectory).isDirectory()) {
+    fail(`MAKEFUN_OUTPUT_DIR points to an existing directory: ${outputDirectory}`);
+  }
   const destination = join(outputDirectory, 'entry.png');
   mkdirSync(dirname(destination), { recursive: true });
   writeFileSync(destination, bytes);
   const written = readFileSync(destination);
   const sourceHash = createHash('sha256').update(bytes).digest('hex');
   const writtenHash = createHash('sha256').update(written).digest('hex');
-  console.log(`Wrote ${bytes.length} identical bytes to ${destination}`);
+  console.log(`Wrote ${bytes.length} source bytes and read ${written.length} written bytes at ${destination}`);
   console.log(`sha256 source:  ${sourceHash}`);
   console.log(`sha256 written: ${writtenHash}`);
   if (!written.equals(bytes) || sourceHash !== writtenHash) {
