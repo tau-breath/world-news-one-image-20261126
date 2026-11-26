@@ -1,3 +1,4 @@
+import { createHash } from 'node:crypto';
 import { mkdirSync, readFileSync, writeFileSync } from 'node:fs';
 import { dirname, join } from 'node:path';
 import { fileURLToPath } from 'node:url';
@@ -30,7 +31,16 @@ try {
   const destination = join(outputDirectory, 'entry.png');
   mkdirSync(dirname(destination), { recursive: true });
   writeFileSync(destination, bytes);
+  const written = readFileSync(destination);
+  const sourceHash = createHash('sha256').update(bytes).digest('hex');
+  const writtenHash = createHash('sha256').update(written).digest('hex');
   console.log(`Wrote ${bytes.length} identical bytes to ${destination}`);
+  console.log(`sha256 source:  ${sourceHash}`);
+  console.log(`sha256 written: ${writtenHash}`);
+  if (!written.equals(bytes) || sourceHash !== writtenHash) {
+    fail('written file does not match the repository entry.png');
+  }
+  console.log('sha256 match confirmed');
 } catch (error) {
   console.error(error instanceof Error ? error.message : String(error));
   process.exitCode = 1;
