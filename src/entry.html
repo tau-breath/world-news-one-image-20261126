@@ -2,276 +2,510 @@
 <html lang="en">
 <head>
 <meta charset="utf-8">
-<title>The World Today — 26 November 2026</title>
+<title>The Day in One Image — 26 November 2026</title>
 <style>
 @font-face{font-family:Inter;src:url("fonts/Inter-400.woff2") format("woff2");font-weight:400;font-style:normal;font-display:block}
 @font-face{font-family:Inter;src:url("fonts/Inter-500.woff2") format("woff2");font-weight:500;font-style:normal;font-display:block}
 @font-face{font-family:Inter;src:url("fonts/Inter-700.woff2") format("woff2");font-weight:700;font-style:normal;font-display:block}
 @font-face{font-family:Barlow;src:url("fonts/BarlowCondensed-700.woff2") format("woff2");font-weight:700;font-style:normal;font-display:block}
 @font-face{font-family:Playfair;src:url("fonts/PlayfairDisplay-900.woff2") format("woff2");font-weight:900;font-style:normal;font-display:block}
-:root{--paper:#F7F2E6;--ink:#14213D;--red:#B3261E;--amber:#E08A1E;--teal:#1F6F78;--sand:#D8C6A5;--muted:#6B6459;--body:#3B3A36}
+:root{--paper:#F7F2E6;--ink:#14213D;--red:#B3261E;--amber:#E08A1E;--teal:#1F6F78;--sand:#D8C6A5;--grey:#6B6459;--body:#3B3A36}
 *{box-sizing:border-box}
-html,body{margin:0;width:1024px;height:1024px;background:var(--paper)}
-body{font-family:Inter,Arial,sans-serif;color:var(--ink);-webkit-font-smoothing:antialiased}
+html,body{margin:0;width:1024px;height:1024px;overflow:hidden}
+body{font-family:Inter,Arial,sans-serif;color:var(--ink);text-rendering:geometricPrecision;-webkit-font-smoothing:antialiased}
 .page{position:relative;width:1024px;height:1024px;overflow:hidden;background:var(--paper)}
-.frame{position:absolute;inset:6px;border:6px solid var(--ink)}
-.kicker{position:absolute;left:30px;top:30px;width:964px;height:16px;display:flex;justify-content:space-between;align-items:flex-start;font-size:9.5px;font-weight:700;letter-spacing:2px;color:var(--muted);white-space:nowrap}
-.kicker-rule{position:absolute;left:30px;top:47px;width:964px;height:1px;background:var(--ink)}
-.masthead{position:absolute;left:30px;top:52px;width:964px;height:77px;margin:0;text-align:center;font-family:Playfair,serif;font-weight:900;font-size:68px;line-height:64px;letter-spacing:-1px;white-space:nowrap}
-.date-band{position:absolute;left:30px;top:132px;width:964px;height:38px;background:var(--ink);color:white;display:flex;align-items:center;justify-content:space-between;padding:0 16px;font-size:11px;font-weight:700;letter-spacing:1.6px;white-space:nowrap}
-.hero{position:absolute;left:30px;top:182px;width:964px;height:208px}
-.hero-art{position:absolute;left:0;top:0;width:560px;height:208px;overflow:hidden;background:var(--ink)}
-.hero-copy{position:absolute;left:574px;top:0;width:390px;height:208px}
-.hero-headline{margin:0;height:136px;font-family:Barlow,Impact,sans-serif;font-weight:700;font-size:46px;line-height:.95;text-transform:uppercase;letter-spacing:-.15px}
-.hero-standfirst{position:absolute;left:0;top:142px;width:390px;height:66px;margin:0;font-size:10.5px;line-height:1.35;font-weight:400;color:var(--body)}
-.chip{position:absolute;left:10px;top:10px;padding:5px 8px 4px;background:var(--red);color:white;font-size:9.5px;font-weight:700;line-height:10px;letter-spacing:1.5px;text-transform:uppercase;white-space:nowrap}
-.chip.bottom{top:auto;bottom:7px;left:8px;padding:4px 6px 3px}
-.mini-row{position:absolute;left:30px;top:402px;width:964px;height:112px;display:grid;grid-template-columns:475px 475px;gap:14px}
-.mini-card{position:relative;width:475px;height:112px;border:1px solid #14213D22;padding:7px 8px}
-.mini-icon{position:absolute;left:8px;top:25px;width:62px;height:62px;overflow:hidden;background:var(--ink)}
-.mini-copy{position:absolute;left:84px;top:2px;width:383px;height:108px}
-.label{font-size:9.5px;line-height:10px;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;color:var(--red);white-space:nowrap}
-.mini-headline{position:absolute;left:0;top:13px;width:383px;height:44px;margin:0;font-family:Barlow,Impact,sans-serif;font-size:22px;line-height:.98;font-weight:700;text-transform:uppercase}
-.mini-standfirst{position:absolute;left:0;top:59px;width:383px;height:48px;margin:0;font-size:10.5px;line-height:1.15;font-weight:400;color:var(--body)}
-.card-row{position:absolute;left:30px;width:964px;height:164px;display:grid;grid-template-columns:310px 310px 310px;gap:14px}
-.row-one{top:522px}.row-two{top:700px}
-.card{position:relative;width:310px;height:164px;border:1px solid #14213D22;background:transparent}
-.card-art{position:absolute;left:0;top:0;width:308px;height:68px;overflow:hidden}
-.card-headline{position:absolute;left:8px;top:72px;width:294px;height:50px;margin:0;font-family:Barlow,Impact,sans-serif;font-size:23px;line-height:.98;font-weight:700;text-transform:uppercase}
-.card-standfirst{position:absolute;left:8px;top:120px;width:294px;height:42px;margin:0;font-size:10.5px;line-height:1.28;font-weight:400;color:var(--body)}
-.briefs{position:absolute;left:30px;top:898px;width:964px;height:64px;border-top:1px solid var(--ink);padding-top:6px}
-.briefs-title{position:absolute;left:0;top:-6px;width:130px;height:12px;padding-right:8px;background:var(--paper);font-size:9.5px;line-height:12px;font-weight:700;letter-spacing:1.5px;color:var(--red);text-transform:uppercase;white-space:nowrap}
-.brief-grid{position:absolute;left:0;top:6px;width:964px;height:56px;display:grid;grid-template-columns:repeat(4,232px);gap:8px 12px;font-size:9.5px;line-height:1.22;font-weight:500;color:var(--body);margin:0;padding:0}
-.brief{margin:0;white-space:normal;overflow:hidden;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical}
-.city{font-weight:700;color:var(--ink);letter-spacing:.4px}
-.footer{position:absolute;left:30px;top:978px;width:964px;height:24px;text-align:center;font-size:9px;line-height:12px;font-weight:400;color:var(--muted)}
+.frame{position:absolute;inset:4px;border:4px solid var(--ink);pointer-events:none}
+.abs{position:absolute;overflow:hidden}
+.kicker{left:30px;top:26px;width:964px;height:12px;display:flex;justify-content:space-between;font-size:9px;line-height:12px;font-weight:700;letter-spacing:2px;color:var(--grey);text-transform:uppercase;white-space:nowrap}
+.kicker-rule{left:30px;top:41px;width:964px;height:1px;background:var(--ink)}
+.masthead{left:30px;top:46px;width:964px;height:64px;margin:0;text-align:center;font-family:Playfair,serif;font-weight:900;font-size:58px;line-height:50px;letter-spacing:-1.5px;white-space:nowrap}
+.subline{left:30px;top:112px;width:964px;height:14px;margin:0;text-align:center;font-size:12.5px;line-height:14px;font-weight:500;color:var(--body);white-space:nowrap}
+.navband{left:30px;top:134px;width:964px;height:30px;background:var(--ink);color:#fff;display:flex;justify-content:space-between;align-items:center;padding:0 14px}
+.navband .nav-l{font-size:10.5px;line-height:12px;font-weight:700;letter-spacing:1.6px;white-space:nowrap}
+.navband .nav-r{font-size:11px;line-height:12px;font-weight:700;letter-spacing:1.6px;white-space:nowrap}
+.feature{top:172px;width:310px;height:252px}
+.feature .art{left:0;top:0;width:310px;height:124px}
+.feature .tariff-number{left:214px;top:36px;width:88px;height:34px;font-family:Barlow,Impact,sans-serif;font-weight:700;font-size:30px;line-height:34px;text-align:right;color:#fff;white-space:nowrap}
+.feature .region{position:absolute;left:0;top:104px;height:20px;background:var(--red);color:#fff;font-size:8.5px;line-height:20px;font-weight:700;letter-spacing:1.3px;padding:0 8px;text-transform:uppercase;white-space:nowrap}
+.feature .headline{left:0;top:128px;width:310px;height:62px;margin:0;font-family:Barlow,Impact,sans-serif;font-weight:700;font-size:26px;line-height:.94;text-transform:uppercase;color:var(--ink)}
+.feature .detail{left:0;top:194px;width:310px;height:28px;margin:0;font-size:10.5px;line-height:14px;font-weight:400;color:var(--body);white-space:normal;word-break:normal}
+.feature .meta{left:0;top:226px;width:310px;height:12px;display:flex;align-items:center;gap:6px;overflow:hidden;white-space:nowrap}
+.feature .status{display:inline-block;background:var(--sand);color:var(--ink);font-size:8px;line-height:8px;font-weight:700;letter-spacing:1.2px;padding:2px 4px;text-transform:uppercase}
+.feature .source{font-size:8px;line-height:8px;font-weight:700;letter-spacing:1.2px;color:var(--grey);text-transform:uppercase}
+.card{top:432px;width:226px;height:180px;border:1px solid #14213D33}
+.card .art{left:0;top:0;width:224px;height:74px}
+.card .region{left:6px;top:78px;width:96px;height:10px;overflow:hidden;white-space:nowrap;font-size:8px;line-height:10px;font-weight:700;letter-spacing:.6px;color:var(--red);text-transform:uppercase}
+.card .headline{left:6px;top:90px;width:212px;height:58px;margin:0;font-family:Barlow,Impact,sans-serif;font-weight:700;font-size:19.5px;line-height:19px;text-transform:uppercase;color:var(--ink)}
+.card .detail{left:6px;top:150px;width:212px;height:26px;margin:0;font-size:10px;line-height:13px;font-weight:400;color:var(--body)}
+.card .meta{left:106px;top:76px;width:112px;height:12px;display:flex;justify-content:flex-end;align-items:center;gap:5px;overflow:hidden;white-space:nowrap}
+.card .status{display:inline-block;background:var(--sand);color:var(--ink);font-size:6.5px;line-height:8px;font-weight:700;letter-spacing:.35px;padding:2px 3px;text-transform:uppercase}
+.card .source{font-size:6.5px;line-height:8px;font-weight:700;letter-spacing:.2px;color:var(--grey);text-transform:uppercase}
+.compact{top:620px;width:226px;height:72px}
+.compact .icon{left:0;top:4px;width:64px;height:64px}
+.compact .region{left:72px;top:4px;width:154px;height:10px;font-size:8px;line-height:10px;font-weight:700;letter-spacing:1.2px;color:var(--grey);text-transform:uppercase;white-space:nowrap}
+.compact .headline{left:72px;top:17px;width:154px;height:51px;margin:0;font-family:Barlow,Impact,sans-serif;font-weight:700;font-size:16.5px;line-height:17px;text-transform:uppercase;color:var(--ink)}
+.numbers{top:700px;width:226px;height:36px}
+.numbers::before,.numbers::after{content:"";position:absolute;left:0;width:226px;height:1px;background:var(--ink)}
+.numbers::before{top:0}.numbers::after{bottom:0}
+.numbers-title{left:30px;top:693px;width:964px;height:7px;font-size:7px;line-height:7px;font-weight:700;letter-spacing:1.2px;color:var(--grey);text-transform:uppercase}
+.numbers .number{left:0;top:0;width:226px;height:28px;font-family:Barlow,Impact,sans-serif;font-weight:700;font-size:26px;line-height:28px;color:var(--ink)}
+.numbers .caption{left:0;top:28px;width:226px;height:8px;font-size:8.5px;line-height:8px;font-weight:500;color:var(--grey);white-space:nowrap}
+.region-panel{top:744px;left:30px;width:300px;height:228px}
+.panel-heading{left:0;top:0;width:100%;height:16px;margin:0;font-family:Barlow,Impact,sans-serif;font-weight:700;font-size:14px;line-height:16px;text-transform:uppercase;color:var(--ink)}
+.panel-rule{left:0;top:16px;width:100%;height:1px;background:var(--ink)}
+.region-row{left:0;width:300px;height:27px}
+.region-row .name{left:0;top:0;width:140px;height:10px;font-size:9px;line-height:10px;font-weight:700;letter-spacing:1.1px;color:var(--ink);text-transform:uppercase;white-space:nowrap}
+.region-row .cities{left:0;top:13px;width:140px;height:9px;font-size:8px;line-height:9px;color:var(--grey);white-space:nowrap}
+.region-row .track{left:140px;top:5px;width:150px;height:8px;background:#E8E0D0}
+.region-row .bar{left:0;top:0;height:8px}
+.region-row .count{right:0;top:1px;width:8px;height:15px;font-family:Barlow,Impact,sans-serif;font-weight:700;font-size:13px;line-height:15px;text-align:right;color:var(--ink)}
+.briefs{top:744px;left:346px;width:648px;height:228px}
+.brief-grid{left:0;top:32px;width:648px;height:190px}
+.brief{position:absolute;width:324px;height:19px;overflow:hidden;text-overflow:clip;white-space:nowrap;font-size:9px;line-height:13px;font-weight:500;color:var(--body)}
+.brief .city{font-family:Inter,Arial,sans-serif;font-size:8px;line-height:13px;font-weight:700;letter-spacing:1px;color:var(--ink);text-transform:uppercase}
+.footer{left:30px;top:978px;width:964px;height:16px;text-align:center;color:var(--grey);font-size:8px;line-height:8px;font-weight:500}
+.footer-line{position:absolute;left:0;width:964px;height:8px;overflow:hidden;white-space:nowrap}
+.footer-line.one{top:0}.footer-line.two{top:8px}
 svg{display:block;width:100%;height:100%}
-svg text{font-family:Inter,Arial,sans-serif}
+svg text{font-family:Barlow,Impact,sans-serif}
 </style>
 </head>
 <body>
-<main class="page" aria-label="The World Today front page for Thursday 26 November 2026">
+<main class="page" aria-label="The day in one image, Thursday 26 November 2026">
   <div class="frame"></div>
-  <div class="kicker"><span>THE DAY IN ONE IMAGE · WORLD NEWS</span><span>NO. 26 · ONE DAY, ONE PICTURE</span></div>
-  <div class="kicker-rule"></div>
-  <h1 class="masthead">THE WORLD TODAY</h1>
-  <div class="date-band"><span>THURSDAY · 26 NOVEMBER 2026</span><span>17 STORIES · 8 REGIONS · ONE DAY</span></div>
 
-  <section class="hero" aria-label="Lead story">
-    <div class="hero-art">
-      <svg viewBox="0 0 560 296" preserveAspectRatio="none" role="img" aria-label="Bold Gulf refinery and tanker poster beneath two missile arcs">
-        <defs>
-          <linearGradient id="gulfSky" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#14213D"/><stop offset=".5" stop-color="#14213D"/><stop offset=".62" stop-color="#B3261E"/><stop offset=".68" stop-color="#E08A1E"/><stop offset="1" stop-color="#E08A1E"/></linearGradient>
-          <marker id="missileArrow" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="10" markerHeight="10" orient="auto" markerUnits="userSpaceOnUse"><path d="M0 0 10 5 0 10Z" fill="#B3261E"/></marker>
-        </defs>
-        <rect width="560" height="296" fill="url(#gulfSky)"/>
-        <rect y="200" width="560" height="96" fill="#1F6F78"/>
-        <g stroke="#D8C6A5" stroke-width="1.5" opacity=".65"><path d="M0 224H560"/><path d="M0 254H560"/><path d="M0 284H560"/></g>
-        <g fill="none" stroke="#B3261E" stroke-width="5" stroke-dasharray="11 8" marker-end="url(#missileArrow)"><path d="M544 190Q410 90 240 60"/><path d="M520 150Q420 55 300 40"/></g>
-        <g fill="#0B1526">
-          <rect x="22" y="110" width="38" height="90"/><rect x="70" y="70" width="42" height="130"/><rect x="124" y="100" width="38" height="100"/><rect x="172" y="125" width="40" height="75"/><rect x="84" y="30" width="14" height="40"/>
+  <div class="abs kicker">
+    <span>The day in one image</span>
+    <span>Drawn, not photographed</span>
+  </div>
+  <div class="abs kicker-rule"></div>
+
+  <h1 class="abs masthead">Thursday 26 November 2026</h1>
+
+  <p class="abs subline">Missiles over Riyadh · tariffs on 14 economies · 31 dead in Cairo · a parade moved to Saturday</p>
+
+  <div class="abs navband">
+    <span class="nav-l">THE WORLD TODAY · ONE DAY, ONE PAGE</span>
+    <span class="nav-r">31 STORIES · 6 REGIONS · 11 DRAWN SCENES</span>
+  </div>
+
+  <!-- ===== Feature row ===== -->
+
+  <section class="abs feature" style="left:30px" aria-label="Gulf: Houthis fire missiles at Riyadh">
+    <div class="abs art">
+      <svg viewBox="0 0 310 124" preserveAspectRatio="none" aria-hidden="true">
+        <defs><linearGradient id="g1sky" x1="0" y1="0" x2="0" y2="1">
+          <stop offset="0" stop-color="#14213D"/><stop offset="1" stop-color="#8C3B2A"/>
+        </linearGradient></defs>
+        <rect width="310" height="62" fill="url(#g1sky)"/>
+        <rect y="62" width="310" height="62" fill="#0E2A2E"/>
+        <!-- refinery, four towers -->
+        <g stroke="#14213D" stroke-width="2">
+          <rect x="26" y="42" width="16" height="34" fill="#1B3A3E"/>
+          <rect x="48" y="30" width="14" height="46" fill="#16323A"/>
+          <rect x="68" y="52" width="18" height="24" fill="#1B3A3E"/>
+          <rect x="92" y="36" width="12" height="40" fill="#16323A"/>
+          <rect x="26" y="60" width="78" height="5" fill="#254A44"/>
+          <rect x="112" y="24" width="5" height="52" fill="#1B3A3E"/>
         </g>
-        <g fill="#0B1526"><rect x="22" y="150" width="210" height="6"/><rect x="22" y="176" width="210" height="6"/></g>
-        <g stroke="#E08A1E" stroke-width="1"><path d="M22 150H232"/><path d="M22 176H232"/></g>
-        <g stroke="#E08A1E" stroke-width="2"><path d="M22 110V200"/><path d="M70 70V200"/><path d="M124 100V200"/><path d="M172 125V200"/></g>
-        <g>
-          <ellipse cx="96" cy="66" rx="12" ry="8" fill="#4A4A4F" opacity=".92"/><ellipse cx="110" cy="53" rx="15" ry="10" fill="#6B6459" opacity=".78"/><ellipse cx="126" cy="41" rx="17" ry="11" fill="#8A8578" opacity=".62"/><ellipse cx="142" cy="30" rx="15" ry="10" fill="#6B6459" opacity=".46"/>
-          <ellipse cx="148" cy="96" rx="12" ry="8" fill="#4A4A4F" opacity=".92"/><ellipse cx="162" cy="83" rx="15" ry="10" fill="#6B6459" opacity=".78"/><ellipse cx="178" cy="70" rx="17" ry="11" fill="#8A8578" opacity=".62"/><ellipse cx="194" cy="58" rx="15" ry="10" fill="#6B6459" opacity=".46"/>
+        <rect x="112" y="16" width="5" height="10" fill="#E08A1E"/>
+        <ellipse cx="120" cy="12" rx="14" ry="5" fill="#8C8478"/>
+        <ellipse cx="136" cy="8" rx="16" ry="4" fill="#A69C8E"/>
+        <!-- pipes -->
+        <rect x="26" y="66" width="70" height="3" fill="#0F2B30"/>
+        <!-- tanker right -->
+        <g stroke="#14213D" stroke-width="2">
+          <path d="M208 78 L294 78 L284 98 L218 98 Z" fill="#14213D"/>
+          <rect x="240" y="68" width="18" height="12" fill="#FFFFFF"/>
+          <rect x="264" y="74" width="12" height="8" fill="#E08A1E"/>
+          <rect x="279" y="74" width="8" height="8" fill="#E08A1E"/>
         </g>
-        <g>
-          <path d="M81 70C78 63 81 54 91 44c1 10 9 16 10 22v4H81Z" fill="#B3261E"/>
-          <path d="M85 70c-2-6 1-13 6-19 2 7 6 12 6 16v3H85Z" fill="#E08A1E"/>
-          <path d="M89 70c-1-4 0-8 2-12 2 4 3 8 3 12H89Z" fill="#F4C77B"/>
-          <path d="M133 100c-3-7 0-16 10-26 1 10 9 16 10 22v4h-20Z" fill="#B3261E"/>
-          <path d="M137 100c-2-6 1-13 6-19 2 7 6 12 6 16v3h-12Z" fill="#E08A1E"/>
-          <path d="M141 100c-1-4 0-8 2-12 2 4 3 8 3 12h-5Z" fill="#F4C77B"/>
+        <path d="M284 64 q3 -6 1 -12" stroke="#6B6459" stroke-width="2" fill="none"/>
+        <!-- missile arcs from lower right -->
+        <g stroke="#B3261E" stroke-width="2" fill="none" stroke-dasharray="5 4">
+          <path d="M300 112 Q250 70 200 52"/>
+          <path d="M300 118 Q240 86 172 66"/>
+          <path d="M292 122 Q236 100 168 84"/>
         </g>
-        <g stroke="#14213D" stroke-width="2" stroke-linejoin="round">
-          <path d="M360 250h156l28 8-12 14H372l-12-8Z" fill="#14213D"/>
-          <path d="M372 268H532" fill="none" stroke="#B3261E" stroke-width="3"/>
-          <path d="M474 230h32v20h-32Z" fill="#D8C6A5"/>
-          <path d="M490 212h14v18h-14Z" fill="#B3261E"/>
-          <rect x="380" y="228" width="28" height="22" fill="#1F6F78"/><rect x="411" y="228" width="28" height="22" fill="#E08A1E"/><rect x="442" y="228" width="28" height="22" fill="#B3261E"/>
+        <!-- intercept flash -->
+        <path d="M200 52 l6 -8 2 7 8 -3 -6 8 -7 -2 z" fill="#FFFFFF"/>
+        <!-- waves -->
+        <g stroke="#2E5E5A" stroke-width="2" fill="none">
+          <path d="M10 96 q10 -4 20 0 t20 0"/>
+          <path d="M120 108 q10 -4 20 0 t20 0"/>
+          <path d="M150 84 q8 -3 16 0"/>
         </g>
-        <g><ellipse cx="503" cy="206" rx="8" ry="6" fill="#6B6459" opacity=".9"/><ellipse cx="512" cy="196" rx="11" ry="8" fill="#8A8578" opacity=".72"/><ellipse cx="523" cy="188" rx="9" ry="7" fill="#6B6459" opacity=".5"/></g>
       </svg>
-      <div class="chip">MIDDLE EAST · GULF</div>
     </div>
-    <div class="hero-copy">
-      <h2 class="hero-headline">HOUTHIS STRIKE<br>SAUDI OIL, MISSILES<br>OVER RIYADH</h2>
-      <p class="hero-standfirst">Fire at Ras Tanura, the kingdom's largest refinery, after Houthi drone and missile attacks. The Saudi-led coalition hit Hodeidah port; air defences downed two missiles over Riyadh; a tanker reported a blast 50 nautical miles west of Dubai.</p>
+    <div class="abs region">Middle East · Gulf</div>
+    <h2 class="abs headline">Houthis fire missiles at Riyadh</h2>
+    <p class="abs detail">Saudi air defences downed two missiles and two drones overnight. Fires still burn at Ras Tanura, Houthis claim.</p>
+    <div class="abs meta"><span class="status">Coalition confirms</span><span class="source">Reuters · The National</span></div>
+  </section>
+
+  <section class="abs feature" style="left:357px" aria-label="Washington: a tariff front opens on 14 economies">
+    <div class="abs art">
+      <svg viewBox="0 0 310 124" preserveAspectRatio="none" aria-hidden="true">
+        <rect width="310" height="124" fill="#14213D"/>
+        <!-- stars-and-stripes canton -->
+        <g>
+          <rect x="8" y="8" width="34" height="22" fill="#B3261E"/>
+          <g fill="#F7F2E6">
+            <circle cx="14" cy="14" r="1.6"/><circle cx="22" cy="14" r="1.6"/><circle cx="30" cy="14" r="1.6"/>
+            <circle cx="18" cy="19" r="1.6"/><circle cx="26" cy="19" r="1.6"/>
+            <circle cx="14" cy="24" r="1.6"/><circle cx="22" cy="24" r="1.6"/><circle cx="30" cy="24" r="1.6"/>
+          </g>
+        </g>
+        <!-- slim amber arrow behind the stacks -->
+        <rect x="38" y="103" width="90" height="14" fill="#E08A1E" transform="rotate(-32 83 110)"/>
+        <path d="M140 56 H166 L182 69 L166 82 H140 L154 69 Z" fill="#E08A1E"/>
+        <!-- three stacks of three containers -->
+        <g stroke="#14213D" stroke-width="1">
+          <rect x="30" y="90" width="26" height="12" fill="#1F6F78"/><rect x="30" y="76" width="26" height="12" fill="#E08A1E"/><rect x="30" y="62" width="26" height="12" fill="#B3261E"/>
+          <rect x="76" y="96" width="26" height="12" fill="#B3261E"/><rect x="76" y="82" width="26" height="12" fill="#1F6F78"/><rect x="76" y="68" width="26" height="12" fill="#E08A1E"/>
+          <rect x="122" y="90" width="26" height="12" fill="#E08A1E"/><rect x="122" y="76" width="26" height="12" fill="#1F6F78"/><rect x="122" y="62" width="26" height="12" fill="#B3261E"/>
+        </g>
+      </svg>
+    </div>
+    <div class="abs tariff-number">20–40%</div>
+    <div class="abs region">Washington · Trade</div>
+    <h2 class="abs headline">A tariff front opens on 14 economies</h2>
+    <p class="abs detail">Ceilings of 20–40% were proposed; USTR says final rates will be capped lower.</p>
+    <div class="abs meta"><span class="status">Proposed</span><span class="source">USTR · Reuters</span></div>
+  </section>
+
+  <section class="abs feature" style="left:684px" aria-label="Ukraine: Kyiv hit again as war reaches the sea">
+    <div class="abs art">
+      <svg viewBox="0 0 310 124" preserveAspectRatio="none" aria-hidden="true">
+        <rect width="310" height="124" fill="#0B0F1A"/>
+        <!-- broken apartment block -->
+        <g stroke="#14213D" stroke-width="2">
+          <path d="M18 118 L18 52 L74 52 L74 64 L96 64 L96 118 Z" fill="#1B2434"/>
+          <path d="M110 118 L110 74 L160 74 L160 84 L176 84 L176 118 Z" fill="#16202E"/>
+        </g>
+        <rect x="30" y="66" width="9" height="11" fill="#E08A1E"/>
+        <rect x="52" y="92" width="9" height="11" fill="#E08A1E"/>
+        <rect x="128" y="96" width="9" height="11" fill="#E08A1E"/>
+        <g fill="#101828">
+          <rect x="186" y="104" width="22" height="14"/><rect x="214" y="98" width="18" height="20"/>
+          <rect x="238" y="106" width="24" height="12"/><rect x="268" y="100" width="18" height="18"/>
+          <rect x="292" y="108" width="18" height="10"/>
+        </g>
+        <!-- missile trail + flash -->
+        <path d="M10 96 L250 22" stroke="#FFFFFF" stroke-width="2.5" fill="none" stroke-dasharray="9 5"/>
+        <path d="M250 22 l10 -9 2 9 11 -4 -8 10 -9 -2 z" fill="#E08A1E"/>
+        <!-- smoke column -->
+        <g fill="#3A3F49">
+          <ellipse cx="212" cy="86" rx="16" ry="26"/>
+          <ellipse cx="230" cy="66" rx="18" ry="28"/>
+          <ellipse cx="226" cy="44" rx="12" ry="18"/>
+        </g>
+        <!-- searchlights -->
+        <g stroke="#4A5368" stroke-width="2">
+          <path d="M60 122 L40 30"/>
+          <path d="M150 122 L160 24"/>
+          <path d="M96 122 L96 34"/>
+        </g>
+      </svg>
+    </div>
+    <div class="abs region">Ukraine · War</div>
+    <h2 class="abs headline">Kyiv hit again as war reaches the sea</h2>
+    <p class="abs detail">Seven were hurt in Kyiv; Russia hit two grain ships near Odesa overnight.</p>
+    <div class="abs meta"><span class="status">Reported</span><span class="source">Reuters · Kyiv Mayor</span></div>
+  </section>
+
+  <!-- ===== Card row ===== -->
+
+  <section class="abs card" style="left:30px" aria-label="Cairo: tanker fire kills 31">
+    <div class="abs art">
+      <svg viewBox="0 0 224 74" preserveAspectRatio="none" aria-hidden="true">
+        <defs><linearGradient id="cairo" x1="0" y1="0" x2="0" y2="1">
+          <stop offset="0" stop-color="#2B2333"/><stop offset="1" stop-color="#B3261E"/>
+        </linearGradient></defs>
+        <rect width="224" height="74" fill="url(#cairo)"/>
+        <!-- city blocks behind, ink -->
+        <g fill="#14213D">
+          <rect x="4" y="34" width="20" height="24"/><rect x="28" y="26" width="16" height="32"/>
+          <rect x="158" y="28" width="18" height="30"/><rect x="180" y="36" width="22" height="22"/><rect x="206" y="30" width="14" height="28"/>
+        </g>
+        <!-- sand overpass -->
+        <path d="M0 40 L224 34 L224 44 L0 50 Z" fill="#D8C6A5" stroke="#14213D" stroke-width="2"/>
+        <rect x="24" y="44" width="8" height="24" fill="#D8C6A5" stroke="#14213D" stroke-width="2"/>
+        <rect x="188" y="38" width="8" height="30" fill="#D8C6A5" stroke="#14213D" stroke-width="2"/>
+        <!-- tipped tanker: white/red body -->
+        <g stroke="#14213D" stroke-width="2">
+          <path d="M68 58 L124 44 L132 54 L76 68 Z" fill="#FFFFFF"/>
+          <path d="M68 58 L132 54 L132 58 L72 62 Z" fill="#B3261E"/>
+          <rect x="116" y="38" width="10" height="8" fill="#33393F"/>
+        </g>
+        <path d="M82 52 L82 40" stroke="#E08A1E" stroke-width="4"/>
+        <path d="M76 40 q6 -12 12 0 q-6 6 -12 0" fill="#E08A1E"/>
+        <g fill="#141414">
+          <ellipse cx="88" cy="28" rx="9" ry="6"/><ellipse cx="100" cy="20" rx="11" ry="7"/><ellipse cx="113" cy="13" rx="8" ry="5"/>
+        </g>
+        <!-- roadway -->
+        <rect x="0" y="66" width="224" height="8" fill="#14213D"/>
+      </svg>
+    </div>
+    <div class="abs region">Cairo · Egypt</div>
+    <h2 class="abs headline">Tanker fire kills 31</h2>
+    <p class="abs detail">31 dead, 26 hurt, 27 vehicles burned on Giza's ring road; the driver is held.</p>
+    <div class="abs meta"><span class="status">Official</span><span class="source">MENA</span></div>
+  </section>
+
+  <section class="abs card" style="left:276px" aria-label="Pyongyang: Kim widens tactical nukes">
+    <div class="abs art">
+      <svg viewBox="0 0 224 74" preserveAspectRatio="none" aria-hidden="true">
+        <rect width="224" height="74" fill="#3B3A22"/>
+        <!-- banner -->
+        <g>
+          <rect x="8" y="8" width="30" height="18" fill="#B3261E"/>
+          <rect x="8" y="26" width="30" height="7" fill="#2B4C9B"/>
+          <circle cx="23" cy="17" r="5" fill="#FFFFFF"/>
+        </g>
+        <!-- launcher truck -->
+        <g stroke="#14213D" stroke-width="2">
+          <rect x="34" y="48" width="96" height="12" fill="#2F4436"/>
+          <rect x="34" y="36" width="18" height="12" fill="#42573F"/>
+          <circle cx="50" cy="62" r="6" fill="#14213D"/><circle cx="70" cy="62" r="6" fill="#14213D"/><circle cx="92" cy="62" r="6" fill="#14213D"/><circle cx="112" cy="62" r="6" fill="#14213D"/>
+        </g>
+        <g stroke="#14213D" stroke-width="2">
+          <rect x="96" y="20" width="44" height="8" fill="#5A5650"/>
+          <rect x="134" y="18" width="34" height="6" rx="3" fill="#B3261E"/>
+        </g>
+        <path d="M96 26 L100 44 L96 28 Z" fill="#5A5650"/>
+        <!-- concentric arcs -->
+        <g stroke="#7A8757" stroke-width="1.5" fill="none">
+          <path d="M164 60 A 14 14 0 0 1 192 60"/>
+          <path d="M156 64 A 22 22 0 0 1 200 64"/>
+          <path d="M148 68 A 30 30 0 0 1 208 68"/>
+        </g>
+        <!-- ground -->
+        <rect x="0" y="66" width="224" height="8" fill="#2C3320"/>
+      </svg>
+    </div>
+    <div class="abs region">Pyongyang · Korea</div>
+    <h2 class="abs headline">Kim widens tactical nukes</h2>
+    <p class="abs detail">Kim orders warheads for "multiple domains"; Seoul tells Pyongyang to stop.</p>
+    <div class="abs meta"><span class="status">KCNA says</span><span class="source">KCNA</span></div>
+  </section>
+
+  <section class="abs card" style="left:522px" aria-label="Climate: six days above two degrees, a first">
+    <div class="abs art">
+      <svg viewBox="0 0 224 74" preserveAspectRatio="none" aria-hidden="true">
+        <rect width="224" height="74" fill="#DCE4DC"/>
+        <!-- globe -->
+        <circle cx="82" cy="34" r="26" fill="#2C5FA8" stroke="#14213D" stroke-width="2"/>
+        <g fill="#3E8E55">
+          <path d="M66 20 q8 -6 16 -2 q6 4 0 8 q-10 4 -16 -2 z"/>
+          <path d="M92 40 q10 -2 12 6 q-4 8 -12 4 q-6 -4 0 -10 z"/>
+          <path d="M62 44 q6 -2 8 4 q-2 6 -8 4 q-4 -4 0 -8 z"/>
+        </g>
+        <rect x="56" y="30" width="52" height="8" fill="#B3261E"/>
+        <!-- thermometer -->
+        <g stroke="#14213D" stroke-width="2">
+          <rect x="150" y="8" width="12" height="44" fill="#FFFFFF"/>
+          <circle cx="156" cy="58" r="8" fill="#FFFFFF"/>
+        </g>
+        <rect x="154" y="12" width="4" height="40" fill="#B3261E"/>
+        <circle cx="156" cy="58" r="5" fill="#B3261E"/>
+        <!-- six dots -->
+        <g fill="#B3261E" stroke="#14213D" stroke-width="1.5">
+          <circle cx="62" cy="66" r="3.5"/><circle cx="80" cy="66" r="3.5"/><circle cx="98" cy="66" r="3.5"/>
+          <circle cx="116" cy="66" r="3.5"/><circle cx="134" cy="66" r="3.5"/><circle cx="152" cy="66" r="3.5"/>
+        </g>
+      </svg>
+    </div>
+    <div class="abs region">Climate</div>
+    <h2 class="abs headline">Six days above 2°C, a first</h2>
+    <p class="abs detail">18–23 November all ran past 2°C; Monday reached a record 2.24°C.</p>
+    <div class="abs meta"><span class="status">Data</span><span class="source">COPERNICUS</span></div>
+  </section>
+
+  <section class="abs card" style="left:768px" aria-label="Mumbai: eighteen years since 26/11">
+    <div class="abs art">
+      <svg viewBox="0 0 224 74" preserveAspectRatio="none" aria-hidden="true">
+        <defs><linearGradient id="india" x1="0" y1="0" x2="0" y2="1">
+          <stop offset="0" stop-color="#E08A1E"/><stop offset="1" stop-color="#D8C6A5"/>
+        </linearGradient></defs>
+        <rect width="224" height="74" fill="url(#india)"/>
+        <!-- Gateway: two posts and a crown -->
+        <g fill="#14213D" stroke="#14213D" stroke-width="2">
+          <rect x="58" y="32" width="18" height="40"/>
+          <rect x="126" y="32" width="18" height="40"/>
+          <path d="M50 24 H152 V34 H50 Z"/>
+        </g>
+        <!-- teal water line -->
+        <rect x="0" y="72" width="224" height="4" fill="#1F6F78"/>
+        <!-- candle -->
+        <rect x="160" y="54" width="12" height="18" fill="#FFFFFF" stroke="#14213D" stroke-width="2"/>
+        <path d="M166 44 q5 4 0 10 q-5 -6 0 -10" fill="#E08A1E"/>
+        <!-- 18 tag -->
+        <g>
+          <rect x="188" y="8" width="28" height="18" fill="#B3261E" stroke="#14213D" stroke-width="2"/>
+          <text x="202" y="21" text-anchor="middle" font-size="12" font-weight="700" fill="#FFFFFF" font-family="Inter,Arial,sans-serif">18</text>
+        </g>
+        <!-- ground -->
+        <rect x="0" y="72" width="224" height="2" fill="#1F6F78"/>
+      </svg>
+    </div>
+    <div class="abs region">Mumbai · India</div>
+    <h2 class="abs headline">18 years since 26/11</h2>
+    <p class="abs detail">India marks 166 dead in the 2008 attacks and 77 years of its constitution.</p>
+    <div class="abs meta"><span class="status">Official</span><span class="source">PIB</span></div>
+  </section>
+
+  <!-- ===== Compact row ===== -->
+
+  <section class="abs compact" style="left:30px" aria-label="Brussels summit splits over budget">
+    <div class="abs icon">
+      <svg viewBox="0 0 64 64" aria-hidden="true">
+        <circle cx="32" cy="32" r="29" fill="#B3261E" stroke="#14213D" stroke-width="2"/>
+        <g fill="#D8C6A5">
+          <circle cx="18" cy="16" r="2.4"/><circle cx="32" cy="13" r="2.4"/><circle cx="46" cy="16" r="2.4"/>
+          <circle cx="12" cy="32" r="2.4"/><circle cx="23" cy="32" r="2.4"/><circle cx="41" cy="32" r="2.4"/><circle cx="52" cy="32" r="2.4"/>
+          <circle cx="18" cy="48" r="2.4"/><circle cx="32" cy="51" r="2.4"/><circle cx="46" cy="48" r="2.4"/>
+          <circle cx="32" cy="25" r="2.4"/><circle cx="32" cy="39" r="2.4"/>
+        </g>
+      </svg>
+    </div>
+    <div class="abs region">Brussels · EU</div>
+    <h2 class="abs headline">Summit splits over €1.6tn budget</h2>
+  </section>
+
+  <section class="abs compact" style="left:276px" aria-label="West Java mine accident">
+    <div class="abs icon">
+      <svg viewBox="0 0 64 64" aria-hidden="true">
+        <rect x="2" y="2" width="60" height="60" fill="#F7F2E6" stroke="#14213D" stroke-width="2"/>
+        <g stroke="#14213D" stroke-width="2" fill="none">
+          <path d="M14 54 L24 12 L34 54 M18 54 L24 26 L30 54"/>
+          <path d="M24 12 V54 M20 20 H28 M21 30 H27 M20 40 H28 M19 50 H29"/>
+        </g>
+        <rect x="38" y="18" width="20" height="10" fill="#1F6F78" stroke="#14213D" stroke-width="2"/>
+        <rect x="2" y="56" width="60" height="6" fill="#1F6F78"/>
+      </svg>
+    </div>
+    <div class="abs region">West Java · Indonesia</div>
+    <h2 class="abs headline">13 dead, 13 trapped in a mine</h2>
+  </section>
+
+  <section class="abs compact" style="left:522px" aria-label="Bangkok refinery blast">
+    <div class="abs icon">
+      <svg viewBox="0 0 64 64" aria-hidden="true">
+        <rect x="2" y="2" width="60" height="60" fill="#F7F2E6" stroke="#14213D" stroke-width="2"/>
+        <g fill="#1F6F78" stroke="#14213D" stroke-width="2">
+          <rect x="12" y="38" width="14" height="18"/><rect x="34" y="38" width="14" height="18"/>
+          <rect x="16" y="24" width="6" height="14"/><rect x="38" y="24" width="6" height="14"/>
+        </g>
+        <path d="M26 24 q8 -14 12 0 q-6 7 -12 0" fill="#E08A1E" stroke="#14213D" stroke-width="2"/>
+        <path d="M38 20 q8 -8 7 -16" stroke="#3B3A36" stroke-width="4" fill="none"/>
+      </svg>
+    </div>
+    <div class="abs region">Bangkok · Thailand</div>
+    <h2 class="abs headline">Refinery blast injures nine</h2>
+  </section>
+
+  <section class="abs compact" style="left:768px" aria-label="Gaza ceasefire violence">
+    <div class="abs icon">
+      <svg viewBox="0 0 64 64" aria-hidden="true">
+        <rect x="2" y="2" width="60" height="60" fill="#F7F2E6" stroke="#14213D" stroke-width="2"/>
+        <path d="M10 56 V24 H26 V16 H42 V30 H54 V56 Z" fill="#D8C6A5" stroke="#14213D" stroke-width="2"/>
+        <path d="M18 56 V40 H30 V56 M36 56 V42 H48 V56" fill="#F7F2E6" stroke="#14213D" stroke-width="2"/>
+        <g fill="#6B6459"><circle cx="14" cy="58" r="3"/><circle cx="28" cy="59" r="2.5"/><circle cx="46" cy="58" r="3.5"/></g>
+        <path d="M40 14 q8 -7 5 -12" stroke="#6B6459" stroke-width="2" fill="none"/>
+      </svg>
+    </div>
+    <div class="abs region">Gaza</div>
+    <h2 class="abs headline">Nine killed despite ceasefire</h2>
+  </section>
+
+  <div class="abs numbers-title">By the numbers</div>
+
+  <!-- ===== By the numbers ===== -->
+
+  <section class="abs numbers" style="left:30px" aria-label="31 dead in one Cairo fire">
+    <div class="abs number">31</div><div class="abs caption">dead in one Cairo fire</div>
+  </section>
+  <section class="abs numbers" style="left:276px" aria-label="Proposed US tariff ceilings">
+    <div class="abs number">20–40%</div><div class="abs caption">proposed US tariff ceilings</div>
+  </section>
+  <section class="abs numbers" style="left:522px" aria-label="Hottest day on record">
+    <div class="abs number">2.24°C</div><div class="abs caption">hottest day on record, 23 Nov</div>
+  </section>
+  <section class="abs numbers" style="left:768px" aria-label="Miners dead and missing">
+    <div class="abs number">13</div><div class="abs caption">miners dead and 13 missing</div>
+  </section>
+
+  <!-- ===== Region totals ===== -->
+
+  <section class="abs region-panel" aria-label="The day by region">
+    <h2 class="abs panel-heading">The day by region</h2>
+    <div class="abs panel-rule"></div>
+    <div class="abs region-row" style="top:32px">
+      <div class="abs name">Middle East</div><div class="abs cities">Riyadh · Jazan</div>
+      <div class="abs track"><div class="abs bar" style="width:67px;background:var(--ink)"></div></div>
+      <div class="abs count">4</div>
+    </div>
+    <div class="abs region-row" style="top:59px">
+      <div class="abs name">Europe</div><div class="abs cities">Kyiv · Brussels</div>
+      <div class="abs track"><div class="abs bar" style="width:150px;background:var(--red)"></div></div>
+      <div class="abs count">9</div>
+    </div>
+    <div class="abs region-row" style="top:86px">
+      <div class="abs name">Asia</div><div class="abs cities">Dhaka · Beijing</div>
+      <div class="abs track"><div class="abs bar" style="width:133.33px;background:var(--teal)"></div></div>
+      <div class="abs count">8</div>
+    </div>
+    <div class="abs region-row" style="top:113px">
+      <div class="abs name">Africa</div><div class="abs cities">Cairo · Nairobi</div>
+      <div class="abs track"><div class="abs bar" style="width:67px;background:var(--amber)"></div></div>
+      <div class="abs count">4</div>
+    </div>
+    <div class="abs region-row" style="top:140px">
+      <div class="abs name">The Americas</div><div class="abs cities">Washington · Brasília</div>
+      <div class="abs track"><div class="abs bar" style="width:83px;background:var(--sand)"></div></div>
+      <div class="abs count">5</div>
+    </div>
+    <div class="abs region-row" style="top:167px">
+      <div class="abs name">The World</div><div class="abs cities">climate</div>
+      <div class="abs track"><div class="abs bar" style="width:17px;background:var(--grey)"></div></div>
+      <div class="abs count">1</div>
     </div>
   </section>
 
-  <section class="mini-row" aria-label="Trade and Ukraine">
-    <article class="mini-card">
-      <div class="mini-icon">
-        <svg viewBox="0 0 124 62" preserveAspectRatio="none" role="img" aria-label="Three container stacks behind a rising tariff arrow">
-          <rect width="124" height="62" fill="#14213D"/>
-          <path d="M28 57V20H17L42 3 67 20H56V57Z" fill="#E08A1E"/>
-          <g stroke="#14213D" stroke-width="1">
-            <rect x="3" y="39" width="17" height="7" fill="#1F6F78"/><rect x="3" y="47" width="17" height="7" fill="#B3261E"/><rect x="3" y="55" width="17" height="7" fill="#E08A1E"/>
-            <rect x="22" y="31" width="17" height="7" fill="#E08A1E"/><rect x="22" y="39" width="17" height="7" fill="#1F6F78"/><rect x="22" y="47" width="17" height="7" fill="#B3261E"/>
-            <rect x="41" y="39" width="17" height="7" fill="#B3261E"/><rect x="41" y="47" width="17" height="7" fill="#E08A1E"/><rect x="41" y="55" width="17" height="7" fill="#1F6F78"/>
-          </g>
-        </svg>
-      </div>
-      <div class="mini-copy">
-        <div class="label">WASHINGTON · TRADE</div>
-        <h3 class="mini-headline">TRUMP OPENS A TARIFF<br>FRONT ON 14 ECONOMIES</h3>
-        <p class="mini-standfirst">Proposed duties of up to 35% over what Washington calls factory overcapacity; China faces an extra 20%, Singapore up to 20%. S&amp;P futures fell 1.6% before the Thanksgiving close.</p>
-      </div>
-    </article>
-    <article class="mini-card">
-      <div class="mini-icon">
-        <svg viewBox="0 0 62 62" role="img" aria-label="Broken building silhouetted by an amber flash and a small aircraft with a flame">
-          <rect width="62" height="62" fill="#14213D"/>
-          <path d="m31 7 4 9 9-4-4 9 9 4-9 4 4 9-9-4-4 9-4-9-9 4 4-9-9-4 9-4-4-9 9 4Z" fill="#E08A1E"/>
-          <path d="M6 55V28l8-5 7 7 8-13 7 10 8-4 9 8 3-1v25Z" fill="#3B3A36" stroke="#14213D" stroke-width="2" stroke-linejoin="round"/>
-          <path d="M34 50h18l7-4 6 1-4 5 5 3-8 1-5-2H35Z" fill="#1F6F78" stroke="#D8C6A5" stroke-width=".8"/>
-          <path d="m45 48 5-7 3 1-3 7Z" fill="#3B3A36"/>
-          <path d="M43 55c-3 3-4 5-2 6 3 0 4-3 5-6Z" fill="#E08A1E"/><path d="M45 56c-1 2-1 3 0 4 2-1 2-2 2-4Z" fill="#B3261E"/>
-        </svg>
-      </div>
-      <div class="mini-copy">
-        <div class="label">UKRAINE · WAR</div>
-        <h3 class="mini-headline">KYIV BURNING AS UKRAINE<br>HITS A RUSSIAN AIR BASE</h3>
-        <p class="mini-standfirst">Ballistic missiles damaged a mall and flats in Kyiv; Ukraine's general staff says five aircraft were damaged at Savasleyka. 34 countries and the EU demand Russia stop using tear gas.</p>
-      </div>
-    </article>
-  </section>
+  <!-- ===== Twenty briefs ===== -->
 
-  <section class="card-row row-one" aria-label="Climate, China and Koreas">
-    <article class="card">
-      <div class="card-art">
-        <svg viewBox="0 0 308 68" role="img" aria-label="Globe with a red heat band and a full thermometer">
-          <rect width="308" height="68" fill="#F7F2E6"/>
-          <defs><clipPath id="climateClip"><circle cx="82" cy="33" r="29"/></clipPath></defs>
-          <circle cx="82" cy="33" r="29" fill="#1F6F78" stroke="#14213D" stroke-width="2"/>
-          <g clip-path="url(#climateClip)" fill="#D8C6A5"><path d="M55 13 73 7 87 15 81 27 65 29 58 22Z"/><path d="m91 20 18-7 12 9-4 13-17 3Z"/><path d="M60 39 76 35 85 45 75 58 61 52Z"/></g>
-          <path d="M50 28c20 7 45 7 65 0v10c-20 7-45 7-65 0Z" fill="#B3261E" clip-path="url(#climateClip)"/>
-          <rect x="246" y="7" width="12" height="50" rx="6" fill="#F7F2E6" stroke="#14213D" stroke-width="2"/>
-          <rect x="250" y="18" width="4" height="34" rx="2" fill="#B3261E"/><circle cx="252" cy="56" r="8" fill="#B3261E"/>
-          <g fill="#B3261E"><circle cx="126" cy="56" r="4.5"/><circle cx="140" cy="56" r="4.5"/><circle cx="154" cy="56" r="4.5"/><circle cx="168" cy="56" r="4.5"/><circle cx="182" cy="56" r="4.5"/><circle cx="196" cy="56" r="4.5"/></g>
-          <text x="209" y="59" fill="#14213D" font-family="Inter" font-size="9" font-weight="700" letter-spacing="1">6 DAYS</text>
-        </svg>
-        <div class="chip bottom">CLIMATE</div>
-      </div>
-      <h3 class="card-headline">SIX DAYS ABOVE 2°C,<br>FOR THE FIRST TIME</h3>
-      <p class="card-standfirst">Global daily surface temperatures have stayed at least 2°C above pre-industrial levels for six days running; 23 November averaged a record 2.24°C.</p>
-    </article>
-    <article class="card">
-      <div class="card-art">
-        <svg viewBox="0 0 308 68" role="img" aria-label="Shanghai skyline and a red investigation magnifier">
-          <rect width="308" height="68" fill="#D8C6A5"/>
-          <g fill="#6B6459"><rect x="5" y="40" width="21" height="28"/><rect x="31" y="31" width="17" height="37"/><rect x="53" y="45" width="27" height="23"/><rect x="87" y="35" width="18" height="33"/><rect x="112" y="48" width="32" height="20"/><rect x="151" y="38" width="17" height="30"/><rect x="174" y="27" width="24" height="41"/><rect x="204" y="43" width="28" height="25"/></g>
-          <path d="M237 68V19l8-13 8 13v49Z" fill="#14213D"/>
-          <path d="M245 13V3m0 13v13" stroke="#14213D" stroke-width="3"/><circle cx="245" cy="15" r="7" fill="#D8C6A5"/><circle cx="245" cy="2" r="4" fill="#D8C6A5"/>
-          <path d="M270 68 263 27h16l7 41Z" fill="#14213D"/>
-          <g stroke="#E08A1E" stroke-width="1"><path d="M178 33h16m-16 7h16m-16 7h16m-16 7h16"/></g>
-          <circle cx="216" cy="29" r="20" fill="none" stroke="#B3261E" stroke-width="5"/><path d="m230 45 16 18" stroke="#B3261E" stroke-width="6"/>
-        </svg>
-        <div class="chip bottom">SHANGHAI · CHINA</div>
-      </div>
-      <h3 class="card-headline">SHANGHAI'S PARTY CHIEF<br>IS PUT UNDER INVESTIGATION</h3>
-      <p class="card-standfirst">Politburo member Chen Jining faces a probe into "serious violations of discipline and law", Xinhua says, with no charges disclosed.</p>
-    </article>
-    <article class="card">
-      <div class="card-art">
-        <svg viewBox="0 0 308 68" role="img" aria-label="North Korean six-wheel mobile missile launcher with a missile raised forty degrees">
-          <rect width="308" height="68" fill="#6B6459"/>
-          <g fill="none" stroke="#D8C6A5" stroke-width="1.3" opacity=".8"><path d="M163 57C195 12 237 4 267 19"/><path d="M177 57C204 23 236 18 259 29"/></g>
-          <rect x="7" y="8" width="52" height="26" fill="#B3261E"/><rect x="7" y="25" width="52" height="9" fill="#14213D"/><circle cx="20" cy="16" r="5" fill="#F7F2E6"/>
-          <g transform="rotate(-40 174 50)">
-            <path d="M150 47h82v7h-82Z" fill="#D8C6A5" stroke="#14213D" stroke-width="1.5"/>
-            <path d="M163 41h64v7h-64Z" fill="#F7F2E6" stroke="#14213D" stroke-width="1.5"/><path d="m227 39 13 5-13 6Z" fill="#B3261E" stroke="#14213D" stroke-width="1.5"/><path d="m165 41-8-6 2 13Z" fill="#B3261E"/>
-          </g>
-          <g stroke="#14213D" stroke-width="2" stroke-linejoin="round">
-            <path d="M132 44h126v13H132Z" fill="#14213D"/>
-            <path d="M176 35h79v14h-79Z" fill="#1F6F78"/>
-            <path d="M101 30h34l9 22h-43Z" fill="#1F6F78"/>
-            <path d="m108 34 22 1 4 9h-26Z" fill="#D8C6A5" stroke-width="1.2"/>
-          </g>
-          <g fill="#14213D" stroke="#D8C6A5" stroke-width="1"><circle cx="114" cy="56" r="7"/><circle cx="141" cy="56" r="7"/><circle cx="171" cy="56" r="7"/><circle cx="201" cy="56" r="7"/><circle cx="231" cy="56" r="7"/><circle cx="253" cy="56" r="7"/></g>
-          <g fill="#6B6459"><circle cx="114" cy="56" r="2.5"/><circle cx="141" cy="56" r="2.5"/><circle cx="171" cy="56" r="2.5"/><circle cx="201" cy="56" r="2.5"/><circle cx="231" cy="56" r="2.5"/><circle cx="253" cy="56" r="2.5"/></g>
-        </svg>
-        <div class="chip bottom">PYONGYANG · SEOUL</div>
-      </div>
-      <h3 class="card-headline">KIM ORDERS TACTICAL NUKES<br>DEPLOYED WIDER</h3>
-      <p class="card-standfirst">KCNA says nuclear material output is rising and the weapons status is "absolutely inviolable"; Pyongyang ordered Switzerland's senior diplomat out within 48 hours.</p>
-    </article>
-  </section>
-
-  <section class="card-row row-two" aria-label="Egypt, Nigeria and Thanksgiving">
-    <article class="card">
-      <div class="card-art">
-        <svg viewBox="0 0 308 68" role="img" aria-label="Tipped fuel tanker with three flames and smoke beneath a concrete overpass">
-          <rect width="308" height="68" fill="#14213D"/>
-          <g fill="#3B3A36"><rect x="5" y="35" width="24" height="29"/><rect x="34" y="27" width="19" height="37"/><rect x="59" y="40" width="29" height="24"/><rect x="94" y="32" width="21" height="32"/><rect x="270" y="36" width="27" height="28"/></g>
-          <g fill="#3B3A36"><ellipse cx="207" cy="38" rx="8" ry="6"/><ellipse cx="216" cy="28" rx="10" ry="7"/><ellipse cx="227" cy="17" rx="12" ry="8"/></g>
-          <rect y="15" width="308" height="11" fill="#4A4A4F"/><rect x="48" y="26" width="11" height="42" fill="#4A4A4F"/><rect x="249" y="26" width="11" height="42" fill="#4A4A4F"/>
-          <g transform="rotate(-12 171 53)" stroke="#14213D" stroke-width="2" stroke-linejoin="round">
-            <path d="M126 44h67v17h-67Z" fill="#E08A1E"/><path d="M193 47h24l5 14h-29Z" fill="#1F6F78"/>
-            <circle cx="141" cy="62" r="6" fill="#14213D"/><circle cx="177" cy="62" r="6" fill="#14213D"/><circle cx="207" cy="62" r="6" fill="#14213D"/>
-          </g>
-          <g fill="#B3261E" stroke="#E08A1E" stroke-width="2" stroke-linejoin="round"><path d="M157 48 162 16 167 48Z"/><path d="M178 46 184 10 190 46Z"/><path d="M197 48 202 19 207 48Z"/></g>
-          <g fill="#F4C77B"><path d="M160 46 162 27 164 46Z"/><path d="M181 44 184 21 187 44Z"/><path d="M199 46 202 30 205 46Z"/></g>
-        </svg>
-        <div class="chip bottom">CAIRO · EGYPT</div>
-      </div>
-      <h3 class="card-headline">CAIRO TANKER BLAST<br>KILLS 31</h3>
-      <p class="card-standfirst">A fuel truck overturned above a tunnel on Giza's ring road; 21 people were hurt and 27 vehicles burned.</p>
-    </article>
-    <article class="card">
-      <div class="card-art">
-        <svg viewBox="0 0 308 68" role="img" aria-label="Three Nigerian huts in silhouette with one smoke column and a red location pin">
-          <rect width="308" height="68" fill="#F7F2E6"/>
-          <path d="M154 8c-7 0-12 5-12 12 0 9 12 19 12 19s12-10 12-19c0-7-5-12-12-12Z" fill="#B3261E"/><circle cx="154" cy="20" r="4" fill="#F7F2E6"/>
-          <g fill="#14213D"><path d="M20 54V42c0-12 34-12 34 0v12Z"/><path d="M110 56V39c0-15 44-15 44 0v17Z"/><path d="M205 54V42c0-12 34-12 34 0v12Z"/></g>
-          <g fill="#6B6459"><ellipse cx="47" cy="34" rx="8" ry="6" opacity=".9"/><ellipse cx="57" cy="26" rx="11" ry="8" opacity=".75"/><ellipse cx="69" cy="19" rx="13" ry="9" opacity=".6"/><ellipse cx="83" cy="12" rx="12" ry="8" opacity=".45"/></g>
-        </svg>
-        <div class="chip bottom">NIGER STATE · NIGERIA</div>
-      </div>
-      <h3 class="card-headline">GUNMEN KILL 30 IN<br>NIGERIA'S NIGER STATE</h3>
-      <p class="card-standfirst">Villages were burned in reprisal for the killing of Fulani herders, residents say; President Tinubu vows peace in Maiduguri before January's election.</p>
-    </article>
-    <article class="card">
-      <div class="card-art">
-        <svg viewBox="0 0 308 68" role="img" aria-label="Manhattan skyline under a dark storm sky with a parade balloon held down by four taut lines">
-          <rect width="308" height="68" fill="#6B6459"/>
-          <g stroke="#D8C6A5" stroke-width="1" opacity=".8"><path d="M14 5 8 18"/><path d="M34 5 28 18"/><path d="M54 5 48 18"/><path d="M74 5 68 18"/><path d="M94 5 88 18"/><path d="M114 5 108 18"/><path d="M134 5 128 18"/><path d="M154 5 148 18"/><path d="M174 5 168 18"/><path d="M194 5 188 18"/><path d="M214 5 208 18"/><path d="M234 5 228 18"/><path d="M254 5 248 18"/><path d="M274 5 268 18"/><path d="M294 5 288 18"/></g>
-          <g fill="#1F6F78"><rect x="4" y="49" width="17" height="19"/><rect x="26" y="42" width="13" height="26"/><rect x="44" y="52" width="22" height="16"/><rect x="71" y="46" width="16" height="22"/><rect x="92" y="53" width="19" height="15"/><rect x="116" y="39" width="14" height="29"/><rect x="135" y="52" width="25" height="16"/><rect x="165" y="48" width="15" height="20"/><rect x="185" y="53" width="28" height="15"/><rect x="218" y="50" width="17" height="18"/><rect x="240" y="54" width="24" height="14"/><rect x="269" y="44" width="14" height="24"/><rect x="288" y="51" width="16" height="17"/></g>
-          <path d="M285 47C277 47 274 40 279 34c4 5 11 6 14 4 3 5 1 9-8 9Z" fill="#14213D"/>
-          <path d="M285 47V33" fill="none" stroke="#14213D" stroke-width="1.5"/>
-          <ellipse cx="120" cy="26" rx="26" ry="18" fill="#D8C6A5" stroke="#14213D" stroke-width="2"/>
-          <path d="M98 22c-5 0-9 4-9 9h6c0-4 2-7 6-7Z" fill="#D8C6A5" stroke="#14213D" stroke-width="1.5"/>
-          <path d="M142 22c5 0 9 4 9 9h-6c0-4-2-7-6-7Z" fill="#D8C6A5" stroke="#14213D" stroke-width="1.5"/>
-          <path d="M96 26h10v5h-10Z" fill="#B3261E"/><path d="M136 26h10v5h-10Z" fill="#B3261E"/>
-          <g stroke="#14213D" stroke-width="1.2"><path d="M106 40 88 53"/><path d="M114 42 104 54"/><path d="M128 42 138 54"/><path d="M136 40 154 53"/></g>
-          <g stroke="#E08A1E" stroke-width="1" opacity=".8"><path d="M20 55h24m-2 6H66m40-6h22m56 6h20"/></g>
-          <rect x="265" y="5" width="32" height="18" rx="2" fill="#B3261E"/><text x="281" y="18" text-anchor="middle" fill="white" font-size="11" font-weight="700">100</text>
-        </svg>
-        <div class="chip bottom">NEW YORK · STORM</div>
-      </div>
-      <h3 class="card-headline">STORM MOVES THE 100TH<br>PARADE TO SATURDAY</h3>
-      <p class="card-standfirst">A nor'easter with gusts to 65mph made Macy's postpone its centenary parade for the first time ever; New York is under wind and coastal-flood warnings.</p>
-    </article>
-  </section>
-
-  <section class="briefs" aria-label="Also reported">
-    <div class="briefs-title">ALSO REPORTED</div>
-    <div class="brief-grid">
-      <p class="brief"><span class="city">NEW YORK —</span> A UN tribunal says UNRWA sacked nine staff on unproven Israeli claims.</p>
-      <p class="brief"><span class="city">MUMBAI —</span> India marks 18 years since the 2008 attacks; the constitution turns 77.</p>
-      <p class="brief"><span class="city">ADEN —</span> Houthis push towards Yemen's interim capital as residents plan to flee.</p>
-      <p class="brief"><span class="city">ABUJA —</span> Gunmen kill 30 in Niger state; Tinubu to honour air-crash victims.</p>
-      <p class="brief"><span class="city">WEST JAVA —</span> Eight dead and 18 trapped in a flooded gold mine.</p>
-      <p class="brief"><span class="city">CARTAGENA —</span> 76 hostages freed as a 17-hour siege ends.</p>
-      <p class="brief"><span class="city">KUALA LUMPUR —</span> Malaysia seeks $146m from Google over YouTube scams.</p>
-      <p class="brief"><span class="city">OBITUARY —</span> Duran Duran's Andy Taylor, 65, dies of prostate cancer.</p>
+  <section class="abs briefs" aria-label="More news briefs">
+    <h2 class="abs panel-heading">Also today</h2>
+    <div class="abs panel-rule"></div>
+    <div class="abs brief-grid">
+      <div class="brief" style="left:0;top:0"><span class="city">Washington</span> — Judge blocks FCC on Disney's eight ABC licences</div>
+      <div class="brief" style="left:324px;top:0"><span class="city">New York</span> — Macy's 100th parade moves to Saturday; storm hits</div>
+      <div class="brief" style="left:0;top:19px"><span class="city">Hormuz</span> — Two tankers hit mines; a supertanker burns, Guards say</div>
+      <div class="brief" style="left:324px;top:19px"><span class="city">Kuwait City</span> — Two Italians die of wounds from an attack</div>
+      <div class="brief" style="left:0;top:38px"><span class="city">London</span> — Net migration falls to 77,000, a 29-year low</div>
+      <div class="brief" style="left:324px;top:38px"><span class="city">London</span> — Tube drivers start the first of eight strike days</div>
+      <div class="brief" style="left:0;top:57px"><span class="city">Paris</span> — Depardieu ordered to stand trial for rape</div>
+      <div class="brief" style="left:324px;top:57px"><span class="city">Berlin</span> — Two Iraqis held over a Cologne synagogue plot</div>
+      <div class="brief" style="left:0;top:76px"><span class="city">Belgrade</span> — Presidential election set for 27 December</div>
+      <div class="brief" style="left:324px;top:76px"><span class="city">Geneva</span> — Gukesh and Sindarov draw game 3; the match is 1.5–1.5</div>
+      <div class="brief" style="left:0;top:95px"><span class="city">Vientiane</span> — CPTPP, ASEAN and EU trade chiefs meet</div>
+      <div class="brief" style="left:324px;top:95px"><span class="city">Beijing</span> — Shenzhou-24 takes the first foreign astronaut up</div>
+      <div class="brief" style="left:0;top:114px"><span class="city">Naha</span> — US begins permanent F-15EX basing at Kadena</div>
+      <div class="brief" style="left:324px;top:114px"><span class="city">Dhaka</span> — Tear gas on garment workers after a 36% pay rise</div>
+      <div class="brief" style="left:0;top:133px"><span class="city">Nairobi</span> — Court: US-backed Ebola site broke the constitution</div>
+      <div class="brief" style="left:324px;top:133px"><span class="city">Goma</span> — UN peacekeepers evacuate 10 trapped Ebola workers</div>
+      <div class="brief" style="left:0;top:152px"><span class="city">Brasília</span> — Lula sounds out Trabuco for finance minister</div>
+      <div class="brief" style="left:324px;top:152px"><span class="city">Buenos Aires</span> — Senate weighs ending primaries, a Milei win</div>
+      <div class="brief" style="left:0;top:171px"><span class="city">Ibiza</span> — Crew member dies as a diesel tanker sinks; 17 saved</div>
+      <div class="brief" style="left:324px;top:171px"><span class="city">Abu Zabad</span> — 795 displaced in a day as Kordofan fighting spreads</div>
     </div>
   </section>
-  <div class="footer">Every story happened or was first reported on 26 November 2026, in some time zone.<br>Illustrations, not photographs.</div>
+
+  <footer class="abs footer">
+    <div class="footer-line one">Also this week, not 26 November: Huawei verdict 24 Nov · COP31 closed 22 Nov · Chen Jining probe 24 Nov · Trump–Rutte talks 25 Nov.</div>
+    <div class="footer-line two">Illustrations, not photographs · every story happened or was first reported on Thursday 26 November 2026, in some time zone · sources named on each illustrated story.</div>
+  </footer>
 </main>
 </body>
 </html>

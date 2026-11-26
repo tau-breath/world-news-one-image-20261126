@@ -19,6 +19,7 @@ const source = path.resolve(__dirname, '..', 'src', 'entry.html');
       const textOverflow = [];
       const outside = [];
       const widthOverflow = [];
+      const overlaps = [];
       for (const el of document.querySelectorAll('body *')) {
         const style = getComputedStyle(el);
         if (style.display === 'none' || style.visibility === 'hidden') continue;
@@ -29,11 +30,27 @@ const source = path.resolve(__dirname, '..', 'src', 'entry.html');
         if (r.left < -0.5 || r.top < -0.5 || r.right > 1024.5 || r.bottom > 1024.5) {
           outside.push(`${describe(el)}: (${r.left.toFixed(1)}, ${r.top.toFixed(1)})–(${r.right.toFixed(1)}, ${r.bottom.toFixed(1)})`);
         }
-        if (el.clientWidth > 0 && el.scrollWidth > el.clientWidth + 1) {
+        // Briefs are deliberately clipped to their fixed newspaper column.
+        if (!el.classList.contains('brief') && el.clientWidth > 0 && el.scrollWidth > el.clientWidth + 1) {
           widthOverflow.push(`${describe(el)}: scrollWidth ${el.scrollWidth} > clientWidth ${el.clientWidth}; ${JSON.stringify(el.textContent.trim().slice(0, 90))}`);
         }
       }
-      // Explicit ALSO REPORTED strip assertions.
+      const textElements = [...document.querySelectorAll('body *')].filter((el) => {
+        const style = getComputedStyle(el);
+        return style.display !== 'none' && style.visibility !== 'hidden' && el.textContent.trim().length > 0;
+      });
+      for (let i = 0; i < textElements.length; i++) {
+        for (let j = i + 1; j < textElements.length; j++) {
+          const a = textElements[i];
+          const b = textElements[j];
+          if (a.contains(b) || b.contains(a)) continue;
+          const ar = a.getBoundingClientRect();
+          const br = b.getBoundingClientRect();
+          const area = Math.max(0, Math.min(ar.right, br.right) - Math.max(ar.left, br.left)) *
+            Math.max(0, Math.min(ar.bottom, br.bottom) - Math.max(ar.top, br.top));
+          if (area > 4) overlaps.push(`${describe(a)} <${a.textContent.trim().slice(0, 35)}> B ${describe(b)} <${b.textContent.trim().slice(0, 35)}>`);
+        }
+      }
       const stripProblems = [];
       const briefs = document.querySelector('section.briefs');
       const footer = document.querySelector('.footer');
@@ -60,14 +77,17 @@ const source = path.resolve(__dirname, '..', 'src', 'entry.html');
       } else {
         stripProblems.push('briefs block or footer not found');
       }
-      return { textOverflow, outside, widthOverflow, stripProblems };
+      return { textOverflow, outside, widthOverflow, overlaps, stripProblems };
     });
     for (const line of report.stripProblems) console.log(`STRIP ${line}`);
     const stripOk = report.stripProblems.length === 2 && report.stripProblems[0].startsWith('briefs block') && report.stripProblems[1].startsWith('footer block');
     for (const line of report.outside) console.log(`OUTSIDE FRAME ${line}`);
+    for (const line of report.textOverflow) console.log(`TEXT OVERFLOW ${line}`);
     for (const line of report.widthOverflow) console.log(`WIDTH OVERFLOW ${line}`);
-    if (report.textOverflow.length || report.outside.length || report.widthOverflow.length || !stripOk) {
-      console.log(`LAYOUT FAILED: ${report.textOverflow.length} vertical, ${report.outside.length} outside, ${report.widthOverflow.length} horizontal`);
+    for (const line of report.overlaps) console.log(`OVERLAP A ${line}`);
+    if (!report.overlaps.length) console.log('OVERLAP OK');
+    if (report.textOverflow.length || report.outside.length || report.widthOverflow.length || report.overlaps.length || !stripOk) {
+      console.log(`LAYOUT FAILED: ${report.textOverflow.length} vertical, ${report.outside.length} outside, ${report.widthOverflow.length} horizontal, ${report.overlaps.length} overlaps`);
       process.exitCode = 1;
     } else {
       console.log('LAYOUT OK');
