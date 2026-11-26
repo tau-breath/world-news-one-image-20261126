@@ -33,19 +33,20 @@ body{font-family:Inter,Arial,sans-serif;color:var(--ink);-webkit-font-smoothing:
 .label{font-size:9.5px;line-height:10px;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;color:var(--red);white-space:nowrap}
 .mini-headline{position:absolute;left:0;top:13px;width:383px;height:44px;margin:0;font-family:Barlow,Impact,sans-serif;font-size:22px;line-height:.98;font-weight:700;text-transform:uppercase}
 .mini-standfirst{position:absolute;left:0;top:59px;width:383px;height:48px;margin:0;font-size:10.5px;line-height:1.15;font-weight:400;color:var(--body)}
-.card-row{position:absolute;left:30px;width:964px;height:182px;display:grid;grid-template-columns:310px 310px 310px;gap:14px}
-.row-one{top:522px}.row-two{top:716px}
-.card{position:relative;width:310px;height:182px;border:1px solid #14213D22;background:transparent}
+.card-row{position:absolute;left:30px;width:964px;height:164px;display:grid;grid-template-columns:310px 310px 310px;gap:14px}
+.row-one{top:522px}.row-two{top:700px}
+.card{position:relative;width:310px;height:164px;border:1px solid #14213D22;background:transparent}
 .card-art{position:absolute;left:0;top:0;width:308px;height:68px;overflow:hidden}
-.card-headline{position:absolute;left:8px;top:75px;width:294px;height:48px;margin:0;font-family:Barlow,Impact,sans-serif;font-size:23px;line-height:.98;font-weight:700;text-transform:uppercase}
-.card-standfirst{position:absolute;left:8px;top:125px;width:294px;height:49px;margin:0;font-size:10.5px;line-height:1.28;font-weight:400;color:var(--body)}
-.briefs{position:absolute;left:30px;top:910px;width:964px;height:50px;border-top:1px solid var(--ink);padding-top:6px}
+.card-headline{position:absolute;left:8px;top:72px;width:294px;height:50px;margin:0;font-family:Barlow,Impact,sans-serif;font-size:23px;line-height:.98;font-weight:700;text-transform:uppercase}
+.card-standfirst{position:absolute;left:8px;top:120px;width:294px;height:42px;margin:0;font-size:10.5px;line-height:1.28;font-weight:400;color:var(--body)}
+.briefs{position:absolute;left:30px;top:898px;width:964px;height:100px;border-top:1px solid var(--ink);padding-top:6px}
 .briefs-title{position:absolute;left:0;top:-6px;width:130px;height:12px;padding-right:8px;background:var(--paper);font-size:9.5px;line-height:12px;font-weight:700;letter-spacing:1.5px;color:var(--red);text-transform:uppercase;white-space:nowrap}
-.brief-col{position:absolute;top:6px;width:475px;height:43px;font-size:10.5px;line-height:1.35;font-weight:500;color:var(--body)}
-.brief-col.left{left:0}.brief-col.right{left:489px}
-.brief{margin:0;white-space:nowrap}
+.brief-col{position:absolute;top:6px;width:308px;height:93px;font-size:9.5px;line-height:1.22;font-weight:500;color:var(--body);margin:0;padding:0}
+.brief-col p{margin:0}
+.brief-col.left{left:0}.brief-col.mid{left:328px}.brief-col.right{left:656px}
+.brief{margin:0;white-space:normal}
 .city{font-weight:700;color:var(--ink);letter-spacing:.4px}
-.footer{position:absolute;left:30px;top:966px;width:964px;height:24px;text-align:center;font-size:9px;line-height:12px;font-weight:400;color:var(--muted)}
+.footer{position:absolute;left:30px;top:978px;width:964px;height:24px;text-align:center;font-size:9px;line-height:12px;font-weight:400;color:var(--muted)}
 svg{display:block;width:100%;height:100%}
 svg text{font-family:Inter,Arial,sans-serif}
 </style>
@@ -56,7 +57,7 @@ svg text{font-family:Inter,Arial,sans-serif}
   <div class="kicker"><span>THE DAY IN ONE IMAGE · WORLD NEWS</span><span>NO. 26 · ONE DAY, ONE PICTURE</span></div>
   <div class="kicker-rule"></div>
   <h1 class="masthead">THE WORLD TODAY</h1>
-  <div class="date-band"><span>THURSDAY · 26 NOVEMBER 2026</span><span>9 STORIES · 6 REGIONS · ONE DAY</span></div>
+  <div class="date-band"><span>THURSDAY · 26 NOVEMBER 2026</span><span>18 STORIES · 9 REGIONS · ONE DAY</span></div>
 
   <section class="hero" aria-label="Lead story">
     <div class="hero-art">
@@ -238,34 +239,44 @@ svg text{font-family:Inter,Arial,sans-serif}
     </article>
     <article class="card">
       <div class="card-art">
-        <svg viewBox="0 0 308 68" role="img" aria-label="Lower Manhattan skyline beneath a turkey bird balloon and star balloon">
-          <rect width="308" height="68" fill="#F7F2E6"/>
+        <svg viewBox="0 0 308 68" role="img" aria-label="Manhattan skyline under a dark storm sky with a parade balloon held down by four taut lines">
+          <rect width="308" height="68" fill="#6B6459"/>
+          <g stroke="#D8C6A5" stroke-width="1" opacity=".8"><path d="M14 5 8 18"/><path d="M34 5 28 18"/><path d="M54 5 48 18"/><path d="M74 5 68 18"/><path d="M94 5 88 18"/><path d="M114 5 108 18"/><path d="M134 5 128 18"/><path d="M154 5 148 18"/><path d="M174 5 168 18"/><path d="M194 5 188 18"/><path d="M214 5 208 18"/><path d="M234 5 228 18"/><path d="M254 5 248 18"/><path d="M274 5 268 18"/><path d="M294 5 288 18"/></g>
           <g fill="#1F6F78"><rect x="4" y="49" width="17" height="19"/><rect x="26" y="42" width="13" height="26"/><rect x="44" y="52" width="22" height="16"/><rect x="71" y="46" width="16" height="22"/><rect x="92" y="53" width="19" height="15"/><rect x="116" y="39" width="14" height="29"/><rect x="135" y="52" width="25" height="16"/><rect x="165" y="48" width="15" height="20"/><rect x="185" y="53" width="28" height="15"/><rect x="218" y="50" width="17" height="18"/><rect x="240" y="54" width="24" height="14"/><rect x="269" y="44" width="14" height="24"/><rect x="288" y="51" width="16" height="17"/></g>
-          <path d="M84 37 84 67" fill="none" stroke="#14213D" stroke-width="1"/>
-          <g fill="#E08A1E" stroke="#14213D" stroke-width="1.5" stroke-linejoin="round"><path d="M65 27C50 27 43 19 45 9c11 2 18 8 22 15Z"/><path d="M63 30C48 33 39 27 37 17c12 0 21 4 28 10Z"/><path d="M62 34C48 40 39 36 35 28c12-2 22 0 29 4Z"/><path d="M64 37C51 44 43 41 38 34c11-2 21 0 28 3Z"/></g>
-          <ellipse cx="84" cy="24" rx="21" ry="14" fill="#D8C6A5" stroke="#14213D" stroke-width="2"/>
-          <path d="M99 21c0-8 5-13 11-13s10 5 10 12c0 6-6 10-12 10Z" fill="#D8C6A5" stroke="#14213D" stroke-width="2"/>
-          <path d="m117 11 9 3-9 4Z" fill="#E08A1E" stroke="#14213D" stroke-width="1"/><path d="M114 18c4 0 6 3 5 7-4 0-7-2-8-5Z" fill="#B3261E"/>
-          <path d="m200 6 5 10 11 1-8 8 2 11-10-5-10 5 2-11-8-8 11-1Z" fill="#1F6F78" stroke="#14213D" stroke-width="2"/>
-          <g fill="#E08A1E"><circle cx="37" cy="14" r="2"/><circle cx="146" cy="10" r="2"/><circle cx="239" cy="17" r="2"/></g>
+          <path d="M285 47C277 47 274 40 279 34c4 5 11 6 14 4 3 5 1 9-8 9Z" fill="#14213D"/>
+          <path d="M285 47V33" fill="none" stroke="#14213D" stroke-width="1.5"/>
+          <ellipse cx="120" cy="26" rx="26" ry="18" fill="#D8C6A5" stroke="#14213D" stroke-width="2"/>
+          <path d="M98 22c-5 0-9 4-9 9h6c0-4 2-7 6-7Z" fill="#D8C6A5" stroke="#14213D" stroke-width="1.5"/>
+          <path d="M142 22c5 0 9 4 9 9h-6c0-4-2-7-6-7Z" fill="#D8C6A5" stroke="#14213D" stroke-width="1.5"/>
+          <path d="M96 26h10v5h-10Z" fill="#B3261E"/><path d="M136 26h10v5h-10Z" fill="#B3261E"/>
+          <g stroke="#14213D" stroke-width="1.2"><path d="M106 40 88 53"/><path d="M114 42 104 54"/><path d="M128 42 138 54"/><path d="M136 40 154 53"/></g>
+          <g stroke="#E08A1E" stroke-width="1" opacity=".8"><path d="M20 55h24m-2 6H66m40-6h22m56 6h20"/></g>
           <rect x="265" y="5" width="32" height="18" rx="2" fill="#B3261E"/><text x="281" y="18" text-anchor="middle" fill="white" font-size="11" font-weight="700">100</text>
         </svg>
-        <div class="chip bottom">NEW YORK · THANKSGIVING</div>
+        <div class="chip bottom">NEW YORK · STORM</div>
       </div>
-      <h3 class="card-headline">AMERICA'S 100TH<br>THANKSGIVING PARADE</h3>
-      <p class="card-standfirst">Macy's 100th parade leaves Central Park West at 8:30am; stock markets are shut and a Cessna crash off Mississippi killed six.</p>
+      <h3 class="card-headline">STORM MOVES THE 100TH<br>PARADE TO SATURDAY</h3>
+      <p class="card-standfirst">A nor'easter with gusts to 65mph made Macy's postpone its centenary parade for the first time ever; New York is under wind and coastal-flood warnings.</p>
     </article>
   </section>
 
   <section class="briefs" aria-label="Also reported">
     <div class="briefs-title">ALSO REPORTED</div>
     <div class="brief-col left">
+      <p class="brief"><span class="city">NEW YORK —</span> A UN tribunal says UNRWA sacked nine Palestinian staff on unproven Israeli allegations.</p>
       <p class="brief"><span class="city">MUMBAI —</span> India marks 18 years since the 2008 attacks; the constitution turns 77.</p>
-      <p class="brief"><span class="city">CARTAGENA —</span> Hostages freed as a 17-hour supermarket siege ends; the gunman is killed.</p>
-      <p class="brief"><span class="city">WEST JAVA —</span> Eight bodies recovered, 18 miners still trapped in a flooded pit.</p>
+      <p class="brief"><span class="city">ABUJA —</span> Gunmen kill 30 in Niger state, and Tinubu will honour air-crash victims.</p>
+      <p class="brief"><span class="city">WEST JAVA —</span> Eight dead and 18 trapped in a flooded illegal gold mine.</p>
+    </div>
+    <div class="brief-col mid">
+      <p class="brief"><span class="city">ADEN —</span> Houthis push towards Yemen's temporary capital as residents plan to flee.</p>
+      <p class="brief"><span class="city">BAGHDAD —</span> The top court lets Baghdad take Kurdish borders and oil fields.</p>
+      <p class="brief"><span class="city">CARTAGENA —</span> 76 hostages freed as a 17-hour supermarket siege ends.</p>
+      <p class="brief"><span class="city">KUALA LUMPUR —</span> Malaysia seeks $146m from Google over YouTube scams.</p>
     </div>
     <div class="brief-col right">
-      <p class="brief"><span class="city">GENEVA —</span> Gukesh and Sindarov are level 1-1 before game three of the world title match.</p>
+      <p class="brief"><span class="city">JIUQUAN —</span> Pakistan's Zeeshan Ali is the first foreign astronaut on Tiangong.</p>
+      <p class="brief"><span class="city">GENEVA —</span> Gukesh and Sindarov are level 1-1 before game three.</p>
       <p class="brief"><span class="city">OBITUARY —</span> Duran Duran guitarist Andy Taylor, 65, dies of prostate cancer.</p>
     </div>
   </section>
