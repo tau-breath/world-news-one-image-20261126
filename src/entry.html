@@ -19,7 +19,7 @@ body{font-family:Inter,Arial,sans-serif;color:var(--ink);text-rendering:geometri
 .kicker{left:30px;top:26px;width:964px;height:12px;display:flex;justify-content:space-between;font-size:9px;line-height:12px;font-weight:700;letter-spacing:2px;color:var(--grey);text-transform:uppercase;white-space:nowrap}
 .kicker-rule{left:30px;top:41px;width:964px;height:1px;background:var(--ink)}
 .masthead{left:30px;top:46px;width:964px;height:64px;margin:0;text-align:center;font-family:Playfair,serif;font-weight:900;font-size:58px;line-height:50px;letter-spacing:-1.5px;white-space:nowrap}
-.subline{left:30px;top:112px;width:964px;height:14px;margin:0;text-align:center;font-size:12.5px;line-height:14px;font-weight:500;color:var(--body);white-space:nowrap}
+.subline{left:30px;top:112px;width:964px;height:14px;margin:0;text-align:center;font-size:12.5px;line-height:14px;font-weight:700;letter-spacing:.2px;color:var(--body);white-space:nowrap}
 .navband{left:30px;top:134px;width:964px;height:30px;background:var(--ink);color:#fff;display:flex;justify-content:space-between;align-items:center;padding:0 14px}
 .navband .nav-l{font-size:10.5px;line-height:12px;font-weight:700;letter-spacing:1.6px;white-space:nowrap}
 .navband .nav-r{font-size:11px;line-height:12px;font-weight:700;letter-spacing:1.6px;white-space:nowrap}
@@ -50,7 +50,7 @@ body{font-family:Inter,Arial,sans-serif;color:var(--ink);text-rendering:geometri
 .numbers-title{left:30px;top:693px;width:964px;height:7px;font-size:7px;line-height:7px;font-weight:700;letter-spacing:1.2px;color:var(--grey);text-transform:uppercase}
 .numbers .number{left:0;top:0;width:226px;height:28px;font-family:Barlow,Impact,sans-serif;font-weight:700;font-size:26px;line-height:28px;color:var(--ink)}
 .numbers .caption{left:0;top:28px;width:226px;height:8px;font-size:8.5px;line-height:8px;font-weight:500;color:var(--grey);white-space:nowrap}
-.region-panel{top:744px;left:30px;width:300px;height:228px}
+.region-panel{top:744px;left:30px;width:300px;height:222px}
 .panel-heading{left:0;top:0;width:100%;height:16px;margin:0;font-family:Barlow,Impact,sans-serif;font-weight:700;font-size:14px;line-height:16px;text-transform:uppercase;color:var(--ink)}
 .panel-rule{left:0;top:16px;width:100%;height:1px;background:var(--ink)}
 .region-row{left:0;width:300px;height:27px}
@@ -59,13 +59,16 @@ body{font-family:Inter,Arial,sans-serif;color:var(--ink);text-rendering:geometri
 .region-row .track{left:140px;top:5px;width:150px;height:8px;background:#E8E0D0}
 .region-row .bar{left:0;top:0;height:8px}
 .region-row .count{right:0;top:1px;width:8px;height:15px;font-family:Barlow,Impact,sans-serif;font-weight:700;font-size:13px;line-height:15px;text-align:right;color:var(--ink)}
-.briefs{top:744px;left:346px;width:648px;height:228px}
-.brief-grid{left:0;top:32px;width:648px;height:195px}
-.brief{position:absolute;width:324px;height:15px;overflow:hidden;text-overflow:clip;white-space:nowrap;font-size:8.5px;line-height:15px;font-weight:500;color:var(--body)}
-.brief .city{font-family:Inter,Arial,sans-serif;font-size:7.5px;line-height:15px;font-weight:700;letter-spacing:1px;color:var(--ink);text-transform:uppercase}
-.footer{left:30px;top:978px;width:964px;height:16px;text-align:center;color:var(--grey);font-size:8px;line-height:8px;font-weight:500}
+.briefs{top:744px;left:346px;width:648px;height:219px}
+.brief-grid{left:0;top:29px;width:648px;height:190px}
+.brief{position:absolute;width:324px;height:14.6px;overflow:hidden;text-overflow:clip;white-space:nowrap;font-size:8.5px;line-height:14.6px;font-weight:500;color:var(--body)}
+.brief .city{font-family:Inter,Arial,sans-serif;font-size:7.5px;line-height:14.6px;font-weight:700;letter-spacing:1px;color:var(--ink);text-transform:uppercase}
+.date-check{left:30px;top:966px;width:964px;height:18px;border-top:1px solid var(--ink);border-bottom:1px solid var(--ink);display:flex;align-items:center;gap:10px;white-space:nowrap}
+.date-label{font-family:Inter,Arial,sans-serif;font-size:8px;line-height:10px;font-weight:700;letter-spacing:1.2px;color:var(--red)}
+.date-copy{font-family:Inter,Arial,sans-serif;font-size:8px;line-height:10px;font-weight:500;color:var(--body)}
+.footer{left:30px;top:986px;width:964px;height:12px;text-align:center;color:var(--grey);font-size:8px;line-height:8px;font-weight:500}
 .footer-line{position:absolute;left:0;width:964px;height:8px;overflow:hidden;white-space:nowrap}
-.footer-line.one{top:0}.footer-line.two{top:8px}
+.footer-line.two{top:0}
 svg{display:block;width:100%;height:100%}
 svg text{font-family:Barlow,Impact,sans-serif}
 </style>
@@ -481,35 +484,39 @@ svg text{font-family:Barlow,Impact,sans-serif}
     <div class="abs brief-grid">
       <div class="brief" style="left:0;top:0"><span class="city">Washington</span> — Judge blocks FCC on Disney's eight ABC licences</div>
       <div class="brief" style="left:324px;top:0"><span class="city">New York</span> — Macy's 100th parade moves to Saturday; storm hits</div>
-      <div class="brief" style="left:0;top:15px"><span class="city">Hormuz</span> — Two tankers hit mines; a supertanker burns, Guards say</div>
-      <div class="brief" style="left:324px;top:15px"><span class="city">Kuwait City</span> — Two Italians die of wounds from an attack</div>
-      <div class="brief" style="left:0;top:30px"><span class="city">London</span> — Net migration falls to 77,000, a 29-year low</div>
-      <div class="brief" style="left:324px;top:30px"><span class="city">London</span> — Tube drivers start the first of eight strike days</div>
-      <div class="brief" style="left:0;top:45px"><span class="city">Paris</span> — Depardieu ordered to stand trial for rape</div>
-      <div class="brief" style="left:324px;top:45px"><span class="city">Berlin</span> — Two Iraqis held over a Cologne synagogue plot</div>
-      <div class="brief" style="left:0;top:60px"><span class="city">Belgrade</span> — Presidential election set for 27 December</div>
-      <div class="brief" style="left:324px;top:60px"><span class="city">Geneva</span> — Gukesh and Sindarov draw game 3; the match is 1.5–1.5</div>
-      <div class="brief" style="left:0;top:75px"><span class="city">Vientiane</span> — CPTPP, ASEAN and EU trade chiefs meet</div>
-      <div class="brief" style="left:324px;top:75px"><span class="city">Beijing</span> — Shenzhou-24 takes the first foreign astronaut up</div>
-      <div class="brief" style="left:0;top:90px"><span class="city">Naha</span> — US begins permanent F-15EX basing at Kadena</div>
-      <div class="brief" style="left:324px;top:90px"><span class="city">Dhaka</span> — Tear gas on garment workers after a 36% pay rise</div>
-      <div class="brief" style="left:0;top:105px"><span class="city">Nairobi</span> — Court: US-backed Ebola site broke the constitution</div>
-      <div class="brief" style="left:324px;top:105px"><span class="city">Goma</span> — UN peacekeepers evacuate 10 trapped Ebola workers</div>
-      <div class="brief" style="left:0;top:120px"><span class="city">Brasília</span> — Lula sounds out Trabuco for finance minister</div>
-      <div class="brief" style="left:324px;top:120px"><span class="city">Buenos Aires</span> — Senate weighs ending primaries, a Milei win</div>
-      <div class="brief" style="left:0;top:135px"><span class="city">Ibiza</span> — Crew member dies as a diesel tanker sinks; 17 saved</div>
-      <div class="brief" style="left:324px;top:135px"><span class="city">Abu Zabad</span> — 795 displaced in a day as Kordofan fighting spreads</div>
-      <div class="brief" style="left:0;top:150px"><span class="city">New York</span> — A UN tribunal rules UNRWA's staff sackings unproven</div>
-      <div class="brief" style="left:324px;top:150px"><span class="city">Baghdad</span> — Iraq's leaders call a national dialogue for 1 December</div>
-      <div class="brief" style="left:0;top:165px"><span class="city">Jerusalem</span> — Likud challenges the election result at 120 stations</div>
-      <div class="brief" style="left:324px;top:165px"><span class="city">Warsaw</span> — Poland plans a no-fly zone along its eastern border</div>
-      <div class="brief" style="left:0;top:180px"><span class="city">Moscow</span> — Putin dismisses the Murmansk governor in a graft probe</div>
-      <div class="brief" style="left:324px;top:180px"><span class="city">Cairo</span> — Maersk says it will resume full Suez services</div>
+      <div class="brief" style="left:0;top:14.6px"><span class="city">Hormuz</span> — Two tankers hit mines; a supertanker burns, Guards say</div>
+      <div class="brief" style="left:324px;top:14.6px"><span class="city">Kuwait City</span> — Two Italians die of wounds from an attack</div>
+      <div class="brief" style="left:0;top:29.2px"><span class="city">London</span> — Net migration falls to 77,000, a 29-year low</div>
+      <div class="brief" style="left:324px;top:29.2px"><span class="city">London</span> — Tube drivers start the first of eight strike days</div>
+      <div class="brief" style="left:0;top:43.8px"><span class="city">Paris</span> — Depardieu ordered to stand trial for rape</div>
+      <div class="brief" style="left:324px;top:43.8px"><span class="city">Berlin</span> — Two Iraqis held over a Cologne synagogue plot</div>
+      <div class="brief" style="left:0;top:58.4px"><span class="city">Belgrade</span> — Presidential election set for 27 December</div>
+      <div class="brief" style="left:324px;top:58.4px"><span class="city">Geneva</span> — Gukesh and Sindarov draw game 3; the match is 1.5–1.5</div>
+      <div class="brief" style="left:0;top:73px"><span class="city">Vientiane</span> — CPTPP, ASEAN and EU trade chiefs meet</div>
+      <div class="brief" style="left:324px;top:73px"><span class="city">Beijing</span> — Shenzhou-24 takes the first foreign astronaut up</div>
+      <div class="brief" style="left:0;top:87.6px"><span class="city">Naha</span> — US begins permanent F-15EX basing at Kadena</div>
+      <div class="brief" style="left:324px;top:87.6px"><span class="city">Dhaka</span> — Tear gas on garment workers after a 36% pay rise</div>
+      <div class="brief" style="left:0;top:102.2px"><span class="city">Nairobi</span> — Court: US-backed Ebola site broke the constitution</div>
+      <div class="brief" style="left:324px;top:102.2px"><span class="city">Goma</span> — UN peacekeepers evacuate 10 trapped Ebola workers</div>
+      <div class="brief" style="left:0;top:116.8px"><span class="city">Brasília</span> — Lula sounds out Trabuco for finance minister</div>
+      <div class="brief" style="left:324px;top:116.8px"><span class="city">Buenos Aires</span> — Senate weighs ending primaries, a Milei win</div>
+      <div class="brief" style="left:0;top:131.4px"><span class="city">Ibiza</span> — Crew member dies as a diesel tanker sinks; 17 saved</div>
+      <div class="brief" style="left:324px;top:131.4px"><span class="city">Abu Zabad</span> — 795 displaced in a day as Kordofan fighting spreads</div>
+      <div class="brief" style="left:0;top:146px"><span class="city">New York</span> — A UN tribunal rules UNRWA's staff sackings unproven</div>
+      <div class="brief" style="left:324px;top:146px"><span class="city">Baghdad</span> — Iraq's leaders call a national dialogue for 1 December</div>
+      <div class="brief" style="left:0;top:160.6px"><span class="city">Jerusalem</span> — Likud challenges the election result at 120 stations</div>
+      <div class="brief" style="left:324px;top:160.6px"><span class="city">Warsaw</span> — Poland plans a no-fly zone along its eastern border</div>
+      <div class="brief" style="left:0;top:175.2px"><span class="city">Moscow</span> — Putin dismisses the Murmansk governor in a graft probe</div>
+      <div class="brief" style="left:324px;top:175.2px"><span class="city">Cairo</span> — Maersk says it will resume full Suez services</div>
     </div>
   </section>
 
+  <div class="abs date-check">
+    <span class="date-label">NOT 26 NOVEMBER</span>
+    <span class="date-copy">Huawei verdict 24 Nov · COP31 closed without a deal 22 Nov · Chen Jining's investigation 24 Nov · Trump met Rutte at Mar-a-Lago 25 Nov.</span>
+  </div>
+
   <footer class="abs footer">
-    <div class="footer-line one">Also this week, not 26 November: Huawei verdict 24 Nov · COP31 closed 22 Nov · Chen Jining probe 24 Nov · Trump–Rutte talks 25 Nov.</div>
     <div class="footer-line two">Illustrations, not photographs · every story happened or was first reported on Thursday 26 November 2026, in some time zone · sources named on each illustrated story.</div>
   </footer>
 </main>
